@@ -1,0 +1,34 @@
+@import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
+body {
+    font-family: "Bangers", cursive;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    .text-stroke-8 {
+        -webkit-text-stroke-width: 8px;
+        text-stroke-width: 8px;
+    }
+    .text-stroke-16 {
+        -webkit-text-stroke-width: 16px;
+        text-stroke-width: 16px;
+    }
+    .text-stroke-24 {
+        -webkit-text-stroke-width: 24px;
+        text-stroke-width: 24px;
+    }
+    .text-stroke-blue {
+        -webkit-text-stroke-color: #0a48a9;
+        text-stroke-color: #0a48a9;
+    }
+    .text-stroke-gray {
+        -webkit-text-stroke-color: #483f3f;
+        text-stroke-color: #483f3f;
+    }
+    .text-stroke-outer {
+        paint-order: stroke fill;
+    }
+}
