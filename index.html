@@ -5,24 +5,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <!-- <script src="https://cdn.tailwindcss.com"></script> -->
         <link rel="stylesheet" href="/css/style.css" />
-        <style>
-            @import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
-
-            .text-stroke {
-                -webkit-text-stroke: 24px #0a48a9;
-                text-stroke: 24px #0a48a9;
-            }
-
-            .text-stroke-abu {
-                -webkit-text-stroke: 12px #483f3f;
-                text-stroke: 12px #483f3f;
-                paint-order: stroke fill;
-            }
-
-            body {
-                font-family: "Bangers", cursive;
-            }
-        </style>
     </head>
 
     <body>
@@ -70,23 +52,29 @@
             <!-- --------------------------------------------- -->
             <!-- ------------- JUMBOTRON SECTION ------------- -->
             <!-- --------------------------------------------- -->
-            <div class="w-full max-w-[1280px] 2xl:max-w-[1600px] mt-2 relative bg-no-repeat bg-cover border-[#483f3f] border-8 bg-clip-content">
-                <!-- <img class="absolute w-[1401px] h-[290.5px] left-[2px] top-[808px]" src="asset/Rectangle 4.png" /> -->
-                <!-- <img class="absolute w-[752px] h-[456px] left-[2px] top-[460px] rotate-[deg] origin-center scale-y-[-1]" src="asset/Rectangle 3.png" /> -->
-                <!-- <img src="img/jumbotron-bg.svg" class="w-full" alt="" /> -->
-                <!-- <div class="relative bottom-0 -rotate-6">
-                    <div class="text-[40px] font-bangers font-normal uppercase tracking-[2px] text-[#FBDA01] text-stroke-abu">WPU Invites You to</div>
-                    <div class="relative -mt-7 text-[124px] font-bangers font-normal uppercase tracking-[2px]">
-                        <div class="relative z-10 text-transparent bg-[url('../asset/bgteksyellow.jpg')] bg-cover bg-clip-text">DEFEAT THE CHALLENGE,</div>
-                        <div class="z-0 absolute inset-0 bg-red-200 text-stroke bg-clip-text">DEFEAT THE CHALLENGE,</div>
+            <div class="w-full max-w-[1280px] 2xl:max-w-[1600px] relative mt-2">
+                <div class="p-2 bg-[#483f3f] bg-no-repeat bg-cover bg-center overflow-visible" style="clip-path: polygon(0% 0%, 100% 0%, 100% 74.462%, 0% 99.904%, 0% 0%)">
+                    <!-- <div class="absolute -inset-4 -z-10 bg-red-400" style="clip-path: polygon(0% 0%, 100% 0%, 100% 73.462%, 0% 99.904%, 0% 0%)"></div> -->
+                    <img class="w-full select-none" src="asset/jumbotron-bg.png" alt="" />
+                    <!-- <img class="absolute" src="asset/Rectangle 4.png" /> -->
+                    <!-- <img class="absolute w-[752px] h-[456px] left-[2px] top-[460px] rotate-[deg] origin-center scale-y-[-1]" src="asset/Rectangle 3.png" /> -->
+                    <div class="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-[60%] md:-translate-y-2/3 -rotate-6">
+                        <div class="text-[16px] md:text-[32px] xl:text-[40px] font-bangers font-normal uppercase tracking-[2px] text-[#FBDA01] text-stroke-8 md:text-stroke-16 text-stroke-gray text-stroke-outer pl-3">WPU Invites You to</div>
+                        <div class="relative -mt-3 xl:-mt-7 text-[52px] md:text-[72px] xl:text-[120px] font-bangers font-normal uppercase tracking-[2px] whitespace-nowrap">
+                            <div class="relative z-10 text-transparent bg-[url('../asset/bgteksyellow.jpg')] bg-contain bg-clip-text">DEFEAT THE CHALLENGES,</div>
+                            <div class="z-0 absolute inset-0 bg-red-200 stroke-[8px] text-stroke-16 xl:text-stroke-24 text-stroke-blue bg-clip-text">DEFEAT THE CHALLENGES,</div>
+                        </div>
+                        <div class="relative -mt-6 md:-mt-8 xl:-mt-14 text-[52px] md:text-[72px] xl:text-[120px] font-bangers font-normal uppercase text-center md:text-right tracking-[2px] md:pl-[292px] xl:pl-[500px]">
+                            <div class="relative z-10 text-transparent bg-[url('../asset/bgteksyellow.jpg')] bg-contain bg-clip-text whitespace-nowrap pr-2">CLAIM VICTORY</div>
+                            <div class="z-0 absolute inset-0 bg-red-200 text-stroke-16 xl:text-stroke-24 text-stroke-blue bg-clip-text pr-2">CLAIM VICTORY</div>
+                        </div>
                     </div>
-                    <div class="relative -mt-12 text-[124px] font-bangers font-normal uppercase tracking-[2px]">
-                        <div class="relative z-10 text-transparent bg-[url('../asset/bgteksyellow.jpg')] bg-cover bg-clip-text">CLAIM VICTORY!</div>
-                        <div class="z-0 absolute inset-0 bg-red-200 text-stroke bg-clip-text">CLAIM VICTORY!</div>
-                    </div>
-                </div> -->
-
-                <!-- <img class="absolute w-[113px] h-[139px] left-[-8px] top-0 border-6 border-[#483F3F]" src="asset/Vector 1.png" /> -->
+                    <img src="https://i.pinimg.com/originals/4d/9d/44/4d9d44ff5b527bfb2efadee086179dec.gif" class="absolute scale-150 top-0 rotate-45 mix-blend-screen" alt="" />
+                </div>
+                <img class="absolute w-10 lg:w-24 left-0 md:left-[10%] top-0 border-6 border-[#483F3F]" src="asset/lightning.png" />
+                <img class="absolute w-10 lg:w-24 right-0 md:right-[10%] top-[5%] border-6 border-[#483F3F]" src="asset/lightning.png" />
+                <img class="absolute w-10 lg:w-24 left-4 bottom-[10%] md:left-1/4 md:bottom-1/4 border-6 border-[#483F3F]" src="asset/lightning.png" />
+                <img class="absolute w-16 lg:w-32 right-[5%] bottom-0 md:right-[7%] md:bottom-[5%] border-6 border-[#483F3F]" src="asset/lightning.png" />
             </div>
             <!-- end jumbotron section -->
 
