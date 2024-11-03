@@ -10,6 +10,9 @@ body {
 @tailwind utilities;
 
 @layer utilities {
+    .font-montserrat {
+        font-family: "Montserrat", sans-serif;
+    }
     .text-stroke-8 {
         -webkit-text-stroke-width: 8px;
         text-stroke-width: 8px;

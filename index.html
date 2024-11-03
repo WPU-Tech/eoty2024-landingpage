@@ -285,6 +285,15 @@
             <!-- --------------------------------------------- -->
             <!-- ------------ TIMELINE SECTION --------------- -->
             <!-- --------------------------------------------- -->
+            <div class="w-full max-w-[1280px] 2xl:max-w-[1600px] border-8 border-[#483F3F] relative mt-4 bg-[url('../asset/bg-blue.webp')] bg-center bg-cover py-16">
+                <div class="w-full flex flex-col gap-8 justify-center items-center px-6 lg:px-12">
+                    <div class="text-5xl lg:text-7xl uppercase relative text-center">
+                        <div class="relative z-10 px-2 bg-[url('../asset/bg-yellow-dots-vertical.webp')] bg-[length:20%] bg-[center_top_60%] text-transparent bg-clip-text">TIMELINE</div>
+                        <div class="absolute z-0 px-2 top-0 text-stroke-gray text-stroke-16">TIMELINE</div>
+                    </div>
+                    <ul id="timeline-section" role="list" class="w-full"></ul>
+                </div>
+            </div>
 
             <!-- --------------------------------------------- -->
             <!-- ------------ PARTNERS SECTION --------------- -->
@@ -300,4 +309,73 @@
             <div class="h-40 w-full"></div>
         </div>
     </body>
+    <script>
+        const timeline = [
+            {
+                title: "Lorem ipsum",
+                date: "Senin, 14 Oktober 2024",
+                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
+            },
+            {
+                title: "Lorem ipsum",
+                date: "Senin, 14 Oktober 2024",
+                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
+            },
+        ];
+
+        const generateTimelineItem = (timelineContainer, item, position) => {
+            const { title, date, description } = item;
+
+            const timelineItem = document.createElement("li");
+            timelineItem.className = "group relative flex";
+
+            const timelineDot = document.createElement("div");
+            timelineDot.className = "flex flex-col items-center pr-8";
+
+            const timelineDotCircle = document.createElement("div");
+            timelineDotCircle.className = "size-10 min-w-10 min-h-10 rounded-full border-8 border-[#FFF8CE] bg-[#FF5508]";
+
+            const timelineDotFirstLine = document.createElement("div");
+            timelineDotFirstLine.className = "w-2 h-full" + (position !== "first" ? " bg-[#FFF8CE]" : "");
+
+            const timelineDotLastLine = document.createElement("div");
+            timelineDotLastLine.className = "w-2 h-full" + (position !== "last" ? " bg-[#FFF8CE]" : "");
+
+            timelineDot.appendChild(timelineDotFirstLine);
+            timelineDot.appendChild(timelineDotCircle);
+            timelineDot.appendChild(timelineDotLastLine);
+
+            const timelineContent = document.createElement("div");
+            timelineContent.className = `w-full relative bg-[#fff8ce] rounded-xl border-8 border-[#483f3f] py-6 px-6 lg:px-16 ${position === "last" ? "" : "mb-8"}`;
+            timelineContent.style.boxShadow = "-8px 8px 0 #483f3f";
+
+            const timelineTitle = document.createElement("h3");
+            timelineTitle.className = "text-[#0A48A9] text-2xl lg:text-3xl";
+            timelineTitle.innerText = title;
+
+            const timelineDate = document.createElement("p");
+            timelineDate.className = "tracking-[0.2em] font-medium";
+            timelineDate.innerText = date;
+
+            const timelineDescription = document.createElement("p");
+            timelineDescription.className = "mt-2 text-gray-600 text-lg";
+            timelineDescription.innerText = description;
+
+            timelineContent.appendChild(timelineTitle);
+            timelineContent.appendChild(timelineDate);
+            timelineContent.appendChild(timelineDescription);
+
+            timelineItem.appendChild(timelineDot);
+            timelineItem.appendChild(timelineContent);
+
+            timelineContainer.appendChild(timelineItem);
+        };
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const timelineSection = document.getElementById("timeline-section");
+            timeline.forEach((item, index) => {
+                generateTimelineItem(timelineSection, item, index === 0 ? "first" : index === timeline.length - 1 ? "last" : "");
+            });
+        });
+    </script>
 </html>
