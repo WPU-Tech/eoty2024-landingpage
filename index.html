@@ -382,6 +382,15 @@
             <!-- --------------------------------------------- -->
             <!-- --------------- FAQ SECTION ----------------- -->
             <!-- --------------------------------------------- -->
+            <div class="w-full max-w-[1280px] 2xl:max-w-[1600px] border-8 border-[#483F3F] relative mt-4 bg-[url('../asset/bg-yellow-dots-vertical-rotated.svg')] bg-top bg-cover py-16">
+                <div class="w-full flex flex-col gap-8 justify-center items-center px-8 lg:px-12">
+                    <div class="text-5xl lg:text-7xl uppercase relative text-center">
+                        <div class="relative z-10 px-2 text-[#ff5508]">FAQ</div>
+                        <div class="absolute z-0 px-2 top-0 text-stroke-gray text-stroke-16">FAQ</div>
+                    </div>
+                    <div id="faq-section" class="space-y-8"></div>
+                </div>
+            </div>
 
             <!-- --------------------------------------------- -->
             <!-- -------------- PUUTER SECTION ---------------- -->
@@ -400,6 +409,24 @@
                 title: "Lorem ipsum",
                 date: "Senin, 14 Oktober 2024",
                 description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
+            },
+        ];
+
+        const faqsList = [
+            {
+                title: "Lorem ipsum",
+                content:
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. ",
+            },
+            {
+                title: "Lorem ipsum",
+                content:
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. ",
+            },
+            {
+                title: "Lorem ipsum",
+                content:
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. ",
             },
         ];
 
@@ -451,10 +478,57 @@
             timelineContainer.appendChild(timelineItem);
         };
 
+        const generateFaqItem = (faqContainer, item) => {
+            const { title, content } = item;
+
+            const faqItem = document.createElement("div");
+            faqItem.dataset.open = "false";
+            faqItem.className = "w-full group relative bg-[#96D9FF] rounded-xl border-8 border-[#483f3f] px-6 lg:px-12 cursor-pointer py-4 lg:py-6 data-[open=true]:py-6 data-[open=true]:lg:py-8 trasiotion-height duration-300 ease-in-out";
+            faqItem.style.boxShadow = "-8px 8px 0 #483f3f";
+
+            const faqHeader = document.createElement("div");
+            faqHeader.className = "flex items-center justify-between gap-4";
+
+            const faqTitle = document.createElement("h3");
+            faqTitle.className = "text-3xl lg:text-5xl text-[#0A48A9]";
+            faqTitle.innerText = title;
+
+            const faqIcon = document.createElement("div");
+            faqIcon.className = "transition-transform duration-300 ease-in-out";
+            faqIcon.innerHTML = `
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down size-6 min-w-6 lg:size-8 lg:min-w-8">
+                    <path d="m18 15-6-6-6 6"/>
+                </svg>
+            `;
+
+            faqHeader.appendChild(faqTitle);
+            faqHeader.appendChild(faqIcon);
+
+            const faqContent = document.createElement("div");
+            faqContent.className = "font-montserrat group-data-[open=true]:mt-2.5 lg:text-lg font-semibold will-change-[height] max-h-0 overflow-hidden transition-height duration-300 ease-in-out";
+            faqContent.innerText = content;
+
+            faqItem.appendChild(faqHeader);
+            faqItem.appendChild(faqContent);
+
+            faqContainer.appendChild(faqItem);
+
+            faqItem.addEventListener("click", () => {
+                faqItem.dataset.open = faqItem.dataset.open === "true" ? "false" : "true";
+                faqIcon.style.transform = faqItem.dataset.open === "true" ? "rotate(180deg)" : "rotate(0deg)";
+                faqContent.style.maxHeight = faqItem.dataset.open === "true" ? faqContent.scrollHeight + "px" : null;
+            });
+        };
+
         document.addEventListener("DOMContentLoaded", function () {
             const timelineSection = document.getElementById("timeline-section");
             timeline.forEach((item, index) => {
                 generateTimelineItem(timelineSection, item, index === 0 ? "first" : index === timeline.length - 1 ? "last" : "");
+            });
+
+            const faqSection = document.getElementById("faq-section");
+            faqsList.forEach((item) => {
+                generateFaqItem(faqSection, item);
             });
         });
     </script>
