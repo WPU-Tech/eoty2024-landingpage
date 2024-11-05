@@ -189,32 +189,33 @@
                 </div>
                 <div class="flex justify-end items-center max-w-[1280px] 2xl:max-w-[1600px] m-auto pt-48 lg:pt-12 pb-12 px-12">
                     <div class="hidden lg:block w-3/12 h-40"></div>
-                    <div class="relative flex gap-4 justify-center items-center">
-                        <button class="hidden lg:block w-auto p-2 mr-2 rounded-full bg-[#483F3F] stroke-white transition-transform duration-100 ease-out translate-y-0 active:translate-y-1">
+                    <div id="games-section" class="splide relative flex gap-4 justify-end items-center">
+                        <button id="prev" class="hidden lg:block w-auto p-2 mr-2 rounded-full bg-[#483F3F] stroke-white transition-transform duration-100 ease-out translate-y-0 active:translate-y-1">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" class="size-6">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
                             </svg>
                         </button>
-                        <div class="w-full lg:w-9/12 relative bg-[#fff8ce] rounded-xl border-8 border-[#483f3f] p-12" style="box-shadow: -8px 8px 0 #483f3f">
-                            <h3 class="text-5xl text-[#0A48A9]">CSS Battle</h3>
-                            <div class="font-montserrat mt-2 text-lg font-medium">
-                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque, quas aspernatur ullam hic sint aperiam nulla necessitatibus vitae a? Dolorum iusto corporis quod quibusdam dicta cum cupiditate quasi deleniti
-                                sequi!
-                            </div>
-                            <div class="absolute right-4 bottom-4 lg:hidden">
-                                <button class="w-auto p-2 mr-2 rounded-full bg-[#483F3F] stroke-white transition-transform duration-100 ease-out translate-y-0 active:translate-y-1">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" class="size-6">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
-                                    </svg>
-                                </button>
-                                <button class="w-auto p-2 rounded-full bg-[#483F3F] stroke-white transition-transform duration-100 ease-out translate-y-0 active:translate-y-1">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" class="size-6">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
-                                    </svg>
-                                </button>
+                        <div class="w-full lg:w-7/12 relative bg-[#fff8ce] rounded-xl border-8 border-[#483f3f]" style="box-shadow: -8px 8px 0 #483f3f">
+                            <div class="splide__track flex-1">
+                                <ul class="splide__list">
+                                    <li class="splide__slide p-12">
+                                        <h3 class="text-5xl text-[#0A48A9]">CSS Battle</h3>
+                                        <div class="font-montserrat mt-2 text-lg font-medium">
+                                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque, quas aspernatur ullam hic sint aperiam nulla necessitatibus vitae a? Dolorum iusto corporis quod quibusdam dicta cum cupiditate
+                                            quasi deleniti sequi!
+                                        </div>
+                                    </li>
+                                    <li class="splide__slide p-12">
+                                        <h3 class="text-5xl text-[#0A48A9]">JS Battle</h3>
+                                        <div class="font-montserrat mt-2 text-lg font-medium">
+                                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque, quas aspernatur ullam hic sint aperiam nulla necessitatibus vitae a? Dolorum iusto corporis quod quibusdam dicta cum cupiditate
+                                            quasi deleniti sequi!
+                                        </div>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
-                        <button class="hidden lg:block w-auto p-2 rounded-full bg-[#483F3F] stroke-white transition-transform duration-100 ease-out translate-y-0 active:translate-y-1">
+                        <button id="next" class="hidden lg:block w-auto p-2 rounded-full bg-[#483F3F] stroke-white transition-transform duration-100 ease-out translate-y-0 active:translate-y-1">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" class="size-6">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
                             </svg>
@@ -546,6 +547,25 @@
             const faqSection = document.getElementById("faq-section");
             faqsList.forEach((item) => {
                 generateFaqItem(faqSection, item);
+            });
+
+            const gamesSection = document.getElementById("games-section");
+            const gamesNext = document.querySelector("#games-section #next");
+            const gamesPrev = document.querySelector("#games-section #prev");
+
+            let gamesSplide = new Splide(gamesSection, {
+                type: "loop",
+                pagination: false,
+                arrows: false,
+                autoHeight: true,
+            });
+
+            gamesSplide.mount();
+            gamesNext.addEventListener("click", () => {
+                gamesSplide.go(">");
+            });
+            gamesPrev.addEventListener("click", () => {
+                gamesSplide.go("<");
             });
 
             const splideOptions = {
