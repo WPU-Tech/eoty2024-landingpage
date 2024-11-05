@@ -5,6 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <!-- <script src="https://cdn.tailwindcss.com"></script> -->
         <link rel="stylesheet" href="/css/style.css" />
+        <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+        <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet" />
     </head>
 
     <body>
@@ -304,33 +306,17 @@
                         <div class="relative z-10 px-2 bg-[url('../asset/bg-yellow-dots-vertical.webp')] bg-[length:20%] bg-[center_top_60%] text-transparent bg-clip-text">OUR SUPER SPONSORS</div>
                         <div class="absolute z-0 px-2 top-0 text-stroke-blue text-stroke-16">OUR SUPER SPONSORS</div>
                     </div>
-                    <div class="relative flex gap-4 justify-start md:justify-center items-center w-full px-1.5">
-                        <button class="block w-auto p-2 mr-2 rounded-full bg-[#483F3F] stroke-white transition-transform duration-100 ease-out translate-y-0 active:translate-y-1">
+                    <div id="sponsors-section" class="splide relative flex gap-4 items-center w-full px-1.5">
+                        <button id="prev" class="block w-auto p-2 rounded-full bg-[#483F3F] stroke-white transition-transform duration-100 ease-out translate-y-0 active:translate-y-1">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" class="size-4 lg:size-6">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
                             </svg>
                         </button>
-                        <div class="flex items-center justify-center gap-4 lg:gap-8 w-full overflow-auto">
-                            <div class="size-20 min-w-20 lg:size-36 lg:min-w-36 rounded-full border-4 lg:border-8 border-[#483F3F] flex items-center justify-center overflow-hidden">
-                                <img src="https://company-assets.showwcase.com/26279/1658558482318-logo-hitam-polos-jpg.jpeg" alt="" />
-                            </div>
-                            <div class="size-20 min-w-20 lg:size-36 lg:min-w-36 rounded-full border-4 lg:border-8 border-[#483F3F] flex items-center justify-center overflow-hidden">
-                                <img src="https://company-assets.showwcase.com/26279/1658558482318-logo-hitam-polos-jpg.jpeg" alt="" />
-                            </div>
-                            <div class="size-20 min-w-20 lg:size-36 lg:min-w-36 rounded-full border-4 lg:border-8 border-[#483F3F] flex items-center justify-center overflow-hidden">
-                                <img src="https://company-assets.showwcase.com/26279/1658558482318-logo-hitam-polos-jpg.jpeg" alt="" />
-                            </div>
-                            <div class="size-20 min-w-20 lg:size-36 lg:min-w-36 rounded-full border-4 lg:border-8 border-[#483F3F] flex items-center justify-center overflow-hidden">
-                                <img src="https://company-assets.showwcase.com/26279/1658558482318-logo-hitam-polos-jpg.jpeg" alt="" />
-                            </div>
-                            <div class="size-20 min-w-20 lg:size-36 lg:min-w-36 rounded-full border-4 lg:border-8 border-[#483F3F] flex items-center justify-center overflow-hidden">
-                                <img src="https://company-assets.showwcase.com/26279/1658558482318-logo-hitam-polos-jpg.jpeg" alt="" />
-                            </div>
-                            <div class="size-20 min-w-20 lg:size-36 lg:min-w-36 rounded-full border-4 lg:border-8 border-[#483F3F] flex items-center justify-center overflow-hidden">
-                                <img src="https://company-assets.showwcase.com/26279/1658558482318-logo-hitam-polos-jpg.jpeg" alt="" />
-                            </div>
+
+                        <div class="splide__track flex-1">
+                            <ul class="splide__list"></ul>
                         </div>
-                        <button class="block w-auto p-2 rounded-full bg-[#483F3F] stroke-white transition-transform duration-100 ease-out translate-y-0 active:translate-y-1">
+                        <button id="next" class="block w-auto p-2 rounded-full bg-[#483F3F] stroke-white transition-transform duration-100 ease-out translate-y-0 active:translate-y-1">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" class="size-4 lg:size-6 rotate-180">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
                             </svg>
@@ -345,33 +331,17 @@
                         <div class="relative z-10 px-2 bg-[url('../asset/bg-yellow-dots-vertical.webp')] bg-[length:20%] bg-[center_top_60%] text-transparent bg-clip-text">OUR SUPER PARTNERS</div>
                         <div class="absolute z-0 px-2 top-0 text-stroke-blue text-stroke-16">OUR SUPER PARTNERS</div>
                     </div>
-                    <div class="relative flex gap-4 justify-start md:justify-center items-center w-full px-1.5">
-                        <button class="block w-auto p-2 mr-2 rounded-full bg-[#483F3F] stroke-white transition-transform duration-100 ease-out translate-y-0 active:translate-y-1">
+                    <div id="partners-section" class="splide relative flex gap-4 items-center w-full px-1.5">
+                        <button id="prev" class="block w-auto p-2 rounded-full bg-[#483F3F] stroke-white transition-transform duration-100 ease-out translate-y-0 active:translate-y-1">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" class="size-4 lg:size-6">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
                             </svg>
                         </button>
-                        <div class="flex items-center justify-center gap-4 lg:gap-8 w-full overflow-auto">
-                            <div class="size-20 min-w-20 lg:size-36 lg:min-w-36 rounded-full border-4 lg:border-8 border-[#483F3F] flex items-center justify-center overflow-hidden">
-                                <img src="https://company-assets.showwcase.com/26279/1658558482318-logo-hitam-polos-jpg.jpeg" alt="" />
-                            </div>
-                            <div class="size-20 min-w-20 lg:size-36 lg:min-w-36 rounded-full border-4 lg:border-8 border-[#483F3F] flex items-center justify-center overflow-hidden">
-                                <img src="https://company-assets.showwcase.com/26279/1658558482318-logo-hitam-polos-jpg.jpeg" alt="" />
-                            </div>
-                            <div class="size-20 min-w-20 lg:size-36 lg:min-w-36 rounded-full border-4 lg:border-8 border-[#483F3F] flex items-center justify-center overflow-hidden">
-                                <img src="https://company-assets.showwcase.com/26279/1658558482318-logo-hitam-polos-jpg.jpeg" alt="" />
-                            </div>
-                            <div class="size-20 min-w-20 lg:size-36 lg:min-w-36 rounded-full border-4 lg:border-8 border-[#483F3F] flex items-center justify-center overflow-hidden">
-                                <img src="https://company-assets.showwcase.com/26279/1658558482318-logo-hitam-polos-jpg.jpeg" alt="" />
-                            </div>
-                            <div class="size-20 min-w-20 lg:size-36 lg:min-w-36 rounded-full border-4 lg:border-8 border-[#483F3F] flex items-center justify-center overflow-hidden">
-                                <img src="https://company-assets.showwcase.com/26279/1658558482318-logo-hitam-polos-jpg.jpeg" alt="" />
-                            </div>
-                            <div class="size-20 min-w-20 lg:size-36 lg:min-w-36 rounded-full border-4 lg:border-8 border-[#483F3F] flex items-center justify-center overflow-hidden">
-                                <img src="https://company-assets.showwcase.com/26279/1658558482318-logo-hitam-polos-jpg.jpeg" alt="" />
-                            </div>
+
+                        <div class="splide__track flex-1">
+                            <ul class="splide__list"></ul>
                         </div>
-                        <button class="block w-auto p-2 rounded-full bg-[#483F3F] stroke-white transition-transform duration-100 ease-out translate-y-0 active:translate-y-1">
+                        <button id="next" class="block w-auto p-2 rounded-full bg-[#483F3F] stroke-white transition-transform duration-100 ease-out translate-y-0 active:translate-y-1">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" class="size-4 lg:size-6 rotate-180">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
                             </svg>
@@ -437,6 +407,28 @@
                 content:
                     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. ",
             },
+        ];
+
+        const sponsorsList = [
+            "https://i.pinimg.com/736x/49/5a/c6/495ac6035b2be5bf2724e19b8973f531.jpg",
+            "https://i.pinimg.com/564x/2d/8b/6f/2d8b6f90a14abda4169461c541e53135.jpg",
+            "https://i.pinimg.com/564x/56/00/ad/5600ade79f740f8141938dfe5cbea1d5.jpg",
+            "https://i.pinimg.com/564x/6d/d2/fb/6dd2fb8dfb6f569328b1b304cb50d42e.jpg",
+            "https://i.pinimg.com/736x/48/93/68/489368e2a0facbf3d48bbd7a4ab95073.jpg",
+            "https://i.pinimg.com/564x/28/f0/31/28f0317e09552f2f439698eb794421be.jpg",
+            "https://i.pinimg.com/564x/dd/20/32/dd20323962f2362722774591873a0aac.jpg",
+            "https://i.pinimg.com/564x/d8/94/1a/d8941a02e9e2fcc8db62b2d41dc88b28.jpg",
+        ];
+
+        const partnersList = [
+            "https://i.pinimg.com/564x/2d/8b/6f/2d8b6f90a14abda4169461c541e53135.jpg",
+            "https://i.pinimg.com/564x/6d/d2/fb/6dd2fb8dfb6f569328b1b304cb50d42e.jpg",
+            "https://i.pinimg.com/736x/48/93/68/489368e2a0facbf3d48bbd7a4ab95073.jpg",
+            "https://i.pinimg.com/564x/56/00/ad/5600ade79f740f8141938dfe5cbea1d5.jpg",
+            "https://i.pinimg.com/564x/dd/20/32/dd20323962f2362722774591873a0aac.jpg",
+            "https://i.pinimg.com/736x/49/5a/c6/495ac6035b2be5bf2724e19b8973f531.jpg",
+            "https://i.pinimg.com/564x/d8/94/1a/d8941a02e9e2fcc8db62b2d41dc88b28.jpg",
+            "https://i.pinimg.com/564x/28/f0/31/28f0317e09552f2f439698eb794421be.jpg",
         ];
 
         const generateTimelineItem = (timelineContainer, item, position) => {
@@ -529,6 +521,22 @@
             });
         };
 
+        const addSplideSlide = (splide, src) => {
+            const slide = document.createElement("li");
+            slide.className = "splide__slide flex items-center justify-center";
+
+            const imageWrapper = document.createElement("div");
+            imageWrapper.className = "size-20 min-w-20 lg:size-36 lg:min-w-36 rounded-full border-4 lg:border-8 border-[#483F3F] flex items-center justify-center overflow-hidden";
+            const img = document.createElement("img");
+            img.src = src;
+            img.alt = "";
+            img.className = "w-full h-full object-cover";
+            imageWrapper.appendChild(img);
+
+            slide.appendChild(imageWrapper);
+            splide.add(slide);
+        };
+
         document.addEventListener("DOMContentLoaded", function () {
             const timelineSection = document.getElementById("timeline-section");
             timeline.forEach((item, index) => {
@@ -538,6 +546,53 @@
             const faqSection = document.getElementById("faq-section");
             faqsList.forEach((item) => {
                 generateFaqItem(faqSection, item);
+            });
+
+            const splideOptions = {
+                type: "loop",
+                pagination: false,
+                arrows: false,
+                gap: "1rem",
+                perMove: 1,
+                width: "95%",
+                perPage: 6,
+                breakpoints: { 500: { perPage: 2 }, 650: { perPage: 3 }, 767: { perPage: 4 }, 1023: { perPage: 5 }, 1280: { perPage: 4 } },
+            };
+
+            const sponsorsSection = document.getElementById("sponsors-section");
+            const sponsorsNext = document.querySelector("#sponsors-section #next");
+            const sponsorsPrev = document.querySelector("#sponsors-section #prev");
+
+            let sponsorsSplide = new Splide(sponsorsSection, splideOptions);
+
+            sponsorsSplide.mount();
+            sponsorsNext.addEventListener("click", () => {
+                sponsorsSplide.go(">");
+            });
+            sponsorsPrev.addEventListener("click", () => {
+                sponsorsSplide.go("<");
+            });
+
+            sponsorsList.forEach((src) => {
+                addSplideSlide(sponsorsSplide, src);
+            });
+
+            const partnersSection = document.getElementById("partners-section");
+            const partnersNext = document.querySelector("#partners-section #next");
+            const partnersPrev = document.querySelector("#partners-section #prev");
+
+            let partnersSplide = new Splide(partnersSection, splideOptions);
+
+            partnersSplide.mount();
+            partnersNext.addEventListener("click", () => {
+                partnersSplide.go(">");
+            });
+            partnersPrev.addEventListener("click", () => {
+                partnersSplide.go("<");
+            });
+
+            partnersList.forEach((src) => {
+                addSplideSlide(partnersSplide, src);
             });
         });
     </script>
