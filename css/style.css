@@ -2,12 +2,12 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
-* {
-  outline: 1px solid green;
-}
-
 body {
   font-family: "Bangers", cursive;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 *, ::before, ::after{
@@ -1627,8 +1627,8 @@ video {
   margin-top: -1.5rem;
 }
 
-.-mt-\[3\.7rem\]{
-  margin-top: -3.7rem;
+.-mt-\[4rem\]{
+  margin-top: -4rem;
 }
 
 .-mt-\[5\.5rem\]{
@@ -1673,22 +1673,6 @@ video {
 
 .mt-\[-4\.2rem\]{
   margin-top: -4.2rem;
-}
-
-.-mt-\[4rem\]{
-  margin-top: -4rem;
-}
-
-.-mt-\[6rem\]{
-  margin-top: -6rem;
-}
-
-.-mt-\[5rem\]{
-  margin-top: -5rem;
-}
-
-.-mt-\[4\.7rem\]{
-  margin-top: -4.7rem;
 }
 
 .block{
@@ -2284,11 +2268,6 @@ video {
   padding-right: 0.375rem;
 }
 
-.px-12{
-  padding-left: 3rem;
-  padding-right: 3rem;
-}
-
 .px-2{
   padding-left: 0.5rem;
   padding-right: 0.5rem;
@@ -2341,12 +2320,12 @@ video {
   padding-left: 3rem;
 }
 
-.pl-2{
-  padding-left: 0.5rem;
-}
-
 .pl-3{
   padding-left: 0.75rem;
+}
+
+.pl-5{
+  padding-left: 1.25rem;
 }
 
 .pl-8{
@@ -2383,14 +2362,6 @@ video {
 
 .pt-8{
   padding-top: 2rem;
-}
-
-.pl-4{
-  padding-left: 1rem;
-}
-
-.pl-5{
-  padding-left: 1.25rem;
 }
 
 .text-center{
@@ -3127,17 +3098,13 @@ video {
     padding-left: 500px;
   }
 
-  .xl\:pt-0{
-    padding-top: 0px;
-  }
-
   .xl\:text-left{
     text-align: left;
   }
 
-  .xl\:text-5xl{
-    font-size: 3rem;
-    line-height: 1;
+  .xl\:text-2xl{
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 
   .xl\:text-6xl{
