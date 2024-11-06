@@ -10,7 +10,7 @@
     </head>
 
     <body>
-        <div class="bg-[#FFFACE] flex flex-col px-4 pt-2 justify-center items-center">
+        <div class="bg-[#FFFACE] flex flex-col px-4 lg:pt-2 justify-center items-center pt-20">
             <!-- --- -->
             <!-- container width pake class ini: w-full max-w-[1280px] 2xl:max-w-[1600px] -->
             <!-- --- -->
@@ -18,36 +18,76 @@
             <!-- ------------------------------------------ -->
             <!--            NAVIGATION SECTION              -->
             <!-- ------------------------------------------ -->
-            <nav class="w-full max-w-[1280px] 2xl:max-w-[1600px] h-[85px] p-4 bg-[#9D8F8F] border-8 border-[#483F3F] flex justify-between items-center">
-                <div class="items-center gap-4 hidden lg:flex">
-                    <div class="flex flex-col justify-center items-center gap-2 px-4 py-2 bg-[#FBDA01] shadow-[4px_4px_0px_#483F3F] rounded border-2 border-[#483F3F]">
-                        <div class="text-[#483F3F] text-2xl font-bangers font-normal uppercase tracking-wider">HOME</div>
-                    </div>
-                    <div class="flex flex-col justify-center items-center gap-2 px-4 py-2 bg-[#FBDA01] shadow-[4px_4px_0px_#483F3F] rounded border-2 border-[#483F3F]">
-                        <div class="text-[#483F3F] text-2xl font-bangers font-normal uppercase tracking-wider">ABOUT</div>
-                    </div>
-                    <div class="flex flex-col justify-center items-center gap-2 px-4 py-2 bg-[#FBDA01] shadow-[4px_4px_0px_#483F3F] rounded border-2 border-[#483F3F]">
-                        <div class="text-[#483F3F] text-2xl font-bangers font-normal uppercase tracking-wider">GAMES</div>
-                    </div>
-                    <div class="flex flex-col justify-center items-center gap-2 px-4 py-2 bg-[#FBDA01] shadow-[4px_4px_0px_#483F3F] rounded border-2 border-[#483F3F]">
-                        <div class="text-[#483F3F] text-2xl font-bangers font-normal uppercase tracking-wider">PRIZE</div>
-                    </div>
-                    <div class="flex flex-col justify-center items-center gap-2 px-4 py-2 bg-[#FBDA01] shadow-[4px_4px_0px_#483F3F] rounded border-2 border-[#483F3F]">
-                        <div class="text-[#483F3F] text-2xl font-bangers font-normal uppercase tracking-wider">RULES</div>
-                    </div>
-                    <div class="flex flex-col justify-center items-center gap-2 px-4 py-2 bg-[#FBDA01] shadow-[4px_4px_0px_#483F3F] rounded border-2 border-[#483F3F]">
-                        <div class="text-[#483F3F] text-2xl font-bangers font-normal uppercase tracking-wider">TIMELINE</div>
-                    </div>
-                    <div class="flex flex-col justify-center items-center gap-2 px-4 py-2 bg-[#FBDA01] shadow-[4px_4px_0px_#483F3F] rounded border-2 border-[#483F3F]">
-                        <div class="text-[#483F3F] text-2xl font-bangers font-normal uppercase tracking-wider">PARTNERS</div>
-                    </div>
-                    <div class="flex flex-col justify-center items-center gap-2 px-4 py-2 bg-[#FBDA01] shadow-[4px_4px_0px_#483F3F] rounded border-2 border-[#483F3F]">
-                        <div class="text-[#483F3F] text-2xl font-bangers font-normal uppercase tracking-wider">FAQ</div>
+            <nav class="fixed top-0 z-50 lg:static w-full max-w-[1280px] 2xl:max-w-[1600px] lg:h-[85px] p-2 sm:p-4 bg-[#9d8f8f] border-[6px] lg:border-8 border-[#483F3F] flex justify-between items-center">
+                <div class="backdrop invisible transition-all duration-300 opacity-0 inset w-full h-full fixed z-40 bg-black bg-opacity-20 left-0 top-0 backdrop-blur-sm"></div>
+                <div
+                    id="nav-wrapper"
+                    class="lg:items-center lg:flex-row text-lg sm:text-xl lg:text-2xl translate-y-full lg:translate-y-0 flex-col justify-around items-stretch transition-transform duration-200 ease-out flex fixed left-0 right-0 gap-4 bottom-0 p-4 bg-[#483f3f] lg:bg-transparent w-auto z-[75] lg:w-auto lg:static"
+                >
+                    <a
+                        href="#"
+                        class="nav-link flex flex-col justify-center items-center gap-2 px-4 py-2 bg-[#FBDA01] shadow-[4px_4px_0px_#483F3F] active:shadow-[2px_2px_0px_#483F3F] transition-all duration-100 rounded border-2 border-[#483F3F]"
+                    >
+                        <div class="text-[#483F3F] font-bangers font-normal uppercase tracking-wider">HOME</div>
+                    </a>
+                    <a
+                        href="#about"
+                        class="nav-link overflow-hidden flex flex-col justify-center items-center gap-2 px-4 py-2 bg-[#FBDA01] shadow-[4px_4px_0px_#483F3F] active:shadow-[2px_2px_0px_#483F3F] transition-all duration-100 rounded border-2 border-[#483F3F]"
+                    >
+                        <div class="text-[#483F3F] font-bangers font-normal uppercase tracking-wider">ABOUT</div>
+                    </a>
+                    <a
+                        href="#games"
+                        class="nav-link flex flex-col justify-center items-center gap-2 px-4 py-2 bg-[#FBDA01] shadow-[4px_4px_0px_#483F3F] active:shadow-[2px_2px_0px_#483F3F] transition-all duration-100 rounded border-2 border-[#483F3F]"
+                    >
+                        <div class="text-[#483F3F] font-bangers font-normal uppercase tracking-wider">GAMES</div>
+                    </a>
+                    <a
+                        href="#prize"
+                        class="nav-link flex flex-col justify-center items-center gap-2 px-4 py-2 bg-[#FBDA01] shadow-[4px_4px_0px_#483F3F] active:shadow-[2px_2px_0px_#483F3F] transition-all duration-100 rounded border-2 border-[#483F3F]"
+                    >
+                        <div class="text-[#483F3F] font-bangers font-normal uppercase tracking-wider">PRIZE</div>
+                    </a>
+                    <a
+                        href="#rules"
+                        class="nav-link flex flex-col justify-center items-center gap-2 px-4 py-2 bg-[#FBDA01] shadow-[4px_4px_0px_#483F3F] active:shadow-[2px_2px_0px_#483F3F] transition-all duration-100 rounded border-2 border-[#483F3F]"
+                    >
+                        <div class="text-[#483F3F] font-bangers font-normal uppercase tracking-wider">RULES</div>
+                    </a>
+                    <a
+                        href="#timeline"
+                        class="nav-link flex flex-col justify-center items-center gap-2 px-4 py-2 bg-[#FBDA01] shadow-[4px_4px_0px_#483F3F] active:shadow-[2px_2px_0px_#483F3F] transition-all duration-100 rounded border-2 border-[#483F3F]"
+                    >
+                        <div class="text-[#483F3F] font-bangers font-normal uppercase tracking-wider">TIMELINE</div>
+                    </a>
+                    <a
+                        href="#partners"
+                        class="nav-link flex flex-col justify-center items-center gap-2 px-4 py-2 bg-[#FBDA01] shadow-[4px_4px_0px_#483F3F] active:shadow-[2px_2px_0px_#483F3F] transition-all duration-100 rounded border-2 border-[#483F3F]"
+                    >
+                        <div class="text-[#483F3F] font-bangers font-normal uppercase tracking-wider">PARTNERS</div>
+                    </a>
+                    <a
+                        href="#faq"
+                        class="nav-link flex flex-col justify-center items-center gap-2 px-4 py-2 bg-[#FBDA01] shadow-[4px_4px_0px_#483F3F] active:shadow-[2px_2px_0px_#483F3F] transition-all duration-100 rounded border-2 border-[#483F3F]"
+                    >
+                        <div class="text-[#483F3F] font-bangers font-normal uppercase tracking-wider">FAQ</div>
+                    </a>
+                    <div class="w-full flex justify-center lg:hidden">
+                        <button class="active:translate-y-1 transition-transform duration-200 ease-out" id="nav-close">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" class="w-8 aspect-square stroke-[#fbda01]">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                            </svg>
+                        </button>
                     </div>
                 </div>
                 <div class="flex flex-col justify-center items-center gap-2 px-4 py-2 bg-[#0948A9] shadow-[4px_4px_0px_#483F3F] rounded border-2 border-[#483F3F]">
-                    <div class="text-white text-2xl font-bangers font-normal uppercase tracking-wider">LOGIN</div>
+                    <div class="text-white font-bangers font-normal uppercase tracking-wider">LOGIN</div>
                 </div>
+                <button id="nav-open" class="flex lg:hidden flex-col justify-center items-center gap-2 px-4 py-2 bg-[#0948A9] shadow-[4px_4px_0px_#483F3F] rounded border-2 border-[#483F3F] active:shadow-[2px_2px_0px_#483F3F]">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" class="w-6 sm:w-8 aspect-square text-white">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                </button>
             </nav>
             <!-- end navigation section -->
 
@@ -80,7 +120,7 @@
             <!-- --------------------------------------------- -->
             <!-- --------- JOIN THE MISSION SECTION ---------- -->
             <!-- --------------------------------------------- -->
-            <div class="w-full h-auto -mt-16 sm:-mt-[6.8rem] lg:-mt-[8rem] flex justify-between lg:items-center max-w-[1280px] 2xl:max-w-[1600px] relative gap-4 lg:h-[36rem] flex-wrap lg:flex-nowrap">
+            <div id="about" class="w-full h-auto -mt-16 sm:-mt-[6.8rem] lg:-mt-[8rem] flex justify-between lg:items-center max-w-[1280px] 2xl:max-w-[1600px] relative gap-4 lg:h-[36rem] flex-wrap lg:flex-nowrap">
                 <div class="flex-grow w-full lg:w-6/12 flex-auto lg:mb-8 relative min-h-[24rem] sm:min-h-0 lg:h-[74%] aspect-[75/64] sm:aspect-[175/96]">
                     <div class="p-2 w-full h-full bg-[#483f3f] bg-no-repeat bg-cover bg-center overflow-visible code-hero-wrapper-clip">
                         <div class="relative top-0 w-full h-full select-none bg-[center_top_30%] bg-[length:70%] code-hero-inner-wrapper-clip bg-[url('../asset/bg-yellow-dots-vertical.webp')]"></div>
@@ -181,7 +221,7 @@
             <!-- --------------------------------------------- -->
             <!-- -------------- GAMES SECTION ---------------- -->
             <!-- --------------------------------------------- -->
-            <div class="w-full max-w-[1280px] 2xl:max-w-[1600px] relative -mx-4 mt-4 bg-[url('../asset/bg-yellow.webp')] bg-center bg-cover border-8 border-[#483F3F]">
+            <div id="games" class="w-full max-w-[1280px] 2xl:max-w-[1600px] relative -mx-4 mt-4 bg-[url('../asset/bg-yellow.webp')] bg-center bg-cover border-8 border-[#483F3F]">
                 <div class="absolute w-72 lg:w-96 aspect-[6/4]">
                     <div class="relative w-full h-full">
                         <div class="w-full h-full bg-white games-clip bg-[url('../asset/bg-orange.webp')] bg-cover bg-center">
@@ -245,7 +285,7 @@
             <!-- --------------------------------------------- -->
             <!-- -------------- PRIZE SECTION ---------------- -->
             <!-- --------------------------------------------- -->
-            <div class="w-full max-w-[1280px] 2xl:max-w-[1600px] flex items-center justify-between h-full sm:h-96 mt-4 flex-wrap sm:flex-nowrap">
+            <div id="prize" class="w-full max-w-[1280px] 2xl:max-w-[1600px] flex items-center justify-between h-full sm:h-96 mt-4 flex-wrap sm:flex-nowrap">
                 <div class="w-full h-full p-2 bg-[#483F3F] relative mr-0 sm:-mr-6 lg:-mr-11 2xl:-mr-[4.5rem] prize-wrapper-left-clip aspect-square sm:aspect-auto">
                     <img src="./asset/bg-blue.webp" class="object-center object-cover w-full h-full prize-wrapper-left-clip" />
                     <div class="absolute inset-0 flex items-center flex-col gap-4 justify-center">
@@ -277,7 +317,7 @@
             <!-- --------------------------------------------- -->
             <!-- -------------- RULES SECTION ---------------- -->
             <!-- --------------------------------------------- -->
-            <div class="w-full max-w-[1280px] 2xl:max-w-[1600px] flex items-stretch justify-between mt-4 gap-2 flex-wrap lg:flex-nowrap">
+            <div id="rules" class="w-full max-w-[1280px] 2xl:max-w-[1600px] flex items-stretch justify-between mt-4 gap-2 flex-wrap lg:flex-nowrap">
                 <div class="w-full lg:w-3/12 2xl:w-3/12 bg-[#483F3F] p-2 rules-left-wrapper-clip lg:-mr-[5rem] 2xl:-mr-[9rem] aspect-[5/2] sm:aspect-[10/2] xl:aspect-auto">
                     <div class="w-full h-full rules-left-inner-wrapper-clip bg-[url('../asset/bg-orange.webp')] bg-cover bg-center flex flex-col gap-0 pt-2 justify-start xl:justify-center">
                         <div class="xl:pl-16">
@@ -306,7 +346,7 @@
             <!-- --------------------------------------------- -->
             <!-- ------------ TIMELINE SECTION --------------- -->
             <!-- --------------------------------------------- -->
-            <div class="w-full max-w-[1280px] 2xl:max-w-[1600px] border-8 border-[#483F3F] relative mt-4 bg-[url('../asset/bg-blue.webp')] bg-center bg-cover py-16">
+            <div id="timeline" class="w-full max-w-[1280px] 2xl:max-w-[1600px] border-8 border-[#483F3F] relative mt-4 bg-[url('../asset/bg-blue.webp')] bg-center bg-cover py-16">
                 <div class="w-full flex flex-col gap-8 justify-center items-center px-6 lg:px-12">
                     <div class="text-5xl lg:text-7xl uppercase relative text-center">
                         <div class="relative z-10 px-2 bg-[url('../asset/bg-yellow-dots-vertical.webp')] bg-[length:20%] bg-[center_top_60%] text-transparent bg-clip-text">TIMELINE</div>
@@ -319,7 +359,7 @@
             <!-- --------------------------------------------- -->
             <!-- ------------ PARTNERS SECTION --------------- -->
             <!-- --------------------------------------------- -->
-            <div class="w-full max-w-[1280px] 2xl:max-w-[1600px] border-8 border-[#483F3F] relative mt-4 bg-[url('../asset/bg-yellow.webp')] bg-center bg-cover py-16">
+            <div id="partners" class="w-full max-w-[1280px] 2xl:max-w-[1600px] border-8 border-[#483F3F] relative mt-4 bg-[url('../asset/bg-yellow.webp')] bg-center bg-cover py-16">
                 <div class="w-full flex flex-col gap-8 justify-center items-center px-8 lg:px-12">
                     <div class="text-4xl lg:text-7xl uppercase relative text-center">
                         <div class="relative z-10 px-2 bg-[url('../asset/bg-yellow-dots-vertical.webp')] bg-[length:20%] bg-[center_top_60%] text-transparent bg-clip-text">OUR SUPER SPONSORS</div>
@@ -344,7 +384,7 @@
                 </div>
             </div>
 
-            <div class="w-full max-w-[1280px] 2xl:max-w-[1600px] border-8 border-[#483F3F] relative mt-4 bg-[url('../asset/bg-orange.webp')] bg-center bg-cover py-16">
+            <div id="super-partners" class="w-full max-w-[1280px] 2xl:max-w-[1600px] border-8 border-[#483F3F] relative mt-4 bg-[url('../asset/bg-orange.webp')] bg-center bg-cover py-16">
                 <div class="w-full flex flex-col gap-8 justify-center items-center px-8 lg:px-12">
                     <div class="text-4xl lg:text-7xl uppercase relative text-center">
                         <div class="relative z-10 px-2 bg-[url('../asset/bg-yellow-dots-vertical.webp')] bg-[length:20%] bg-[center_top_60%] text-transparent bg-clip-text">OUR SUPER PARTNERS</div>
@@ -371,7 +411,7 @@
             <!-- --------------------------------------------- -->
             <!-- --------------- FAQ SECTION ----------------- -->
             <!-- --------------------------------------------- -->
-            <div class="w-full max-w-[1280px] 2xl:max-w-[1600px] border-8 border-[#483F3F] relative mt-4 bg-[url('../asset/bg-yellow-dots-vertical-rotated.svg')] bg-top bg-cover py-16">
+            <div id="faq" class="w-full max-w-[1280px] 2xl:max-w-[1600px] border-8 border-[#483F3F] relative mt-4 bg-[url('../asset/bg-yellow-dots-vertical-rotated.svg')] bg-top bg-cover py-16">
                 <div class="w-full flex flex-col gap-8 justify-center items-center px-8 lg:px-12">
                     <div class="text-5xl lg:text-7xl uppercase relative text-center">
                         <div class="relative z-10 px-2 text-[#ff5508]">FAQ</div>
@@ -639,6 +679,45 @@
 
             partnersList.forEach((src) => {
                 addSplideSlide(partnersSplide, src);
+            });
+
+            let navState = false;
+            const navClose = document.querySelector("#nav-close");
+            const navOpen = document.querySelector("#nav-open");
+            const navWrapper = document.querySelector("#nav-wrapper");
+            const navLinks = document.querySelectorAll(".nav-link");
+            const backdrop = document.querySelector(".backdrop");
+            navClose.addEventListener("click", () => {
+                navState = false;
+                refreshNav();
+            });
+            navOpen.addEventListener("click", () => {
+                navState = true;
+                refreshNav();
+            });
+            backdrop.addEventListener("click", () => {
+                navState = false;
+                refreshNav();
+            });
+            const refreshNav = () => {
+                navWrapper.classList.remove("translate-y-full");
+                navWrapper.classList.remove("translate-y-0");
+                backdrop.classList.remove("opacity-0", "invisible");
+                backdrop.classList.remove("opacity-100", "visible");
+                if (navState) {
+                    navWrapper.classList.add("translate-y-0");
+                    backdrop.classList.add("opacity-100", "visible");
+                } else {
+                    backdrop.classList.add("opacity-0", "invisible");
+                    navWrapper.classList.add("translate-y-full");
+                }
+            };
+            navLinks.forEach((item) => {
+                console.log(item);
+                item.addEventListener("click", () => {
+                    navState = false;
+                    refreshNav();
+                });
             });
         });
     </script>

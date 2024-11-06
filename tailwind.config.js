@@ -9,4 +9,5 @@ module.exports = {
         },
     },
     plugins: [],
+    safelist: ["translate-y-full", "translate-y-0", "opacity-0", "opacity-100"],
 };
