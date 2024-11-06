@@ -1,6 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
+* {
+    outline: 1px solid green;
+}
+
 body {
     font-family: "Bangers", cursive;
 }
@@ -130,6 +134,18 @@ body {
             0.416% 52.951%,
             0% 52.083%
         );
+    }
+    .rules-left-wrapper-clip {
+        clip-path: polygon(100% 0%, 100% 62.027%, 50% 100%, 0% 69.388%, 0% 0%, 100% 0%);
+    }
+    .rules-left-inner-wrapper-clip {
+        clip-path: polygon(100% 0%, 100% 59.027%, 50% 100%, 0% 66.388%, 0% 0%, 100% 0%);
+    }
+    .rules-right-wrapper-clip {
+        clip-path: polygon(100% 0%, 100% 100%, 0% 100%, 0% 3.141%, 50.014% 16.751%, 100% 0%);
+    }
+    .rules-right-inner-wrapper-clip {
+        clip-path: polygon(100% 0%, 100% 100%, 0% 100%, 0% 4.441%, 50% 17.551%, 100% 1%);
     }
     /* ---- sm screen -------- */
     @media (min-width: 640px) {

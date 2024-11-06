@@ -19,7 +19,7 @@
             <!--            NAVIGATION SECTION              -->
             <!-- ------------------------------------------ -->
             <nav class="w-full max-w-[1280px] 2xl:max-w-[1600px] h-[85px] p-4 bg-[#9D8F8F] border-8 border-[#483F3F] flex justify-between items-center">
-                <div class="flex items-center gap-4">
+                <div class="items-center gap-4 hidden lg:flex">
                     <div class="flex flex-col justify-center items-center gap-2 px-4 py-2 bg-[#FBDA01] shadow-[4px_4px_0px_#483F3F] rounded border-2 border-[#483F3F]">
                         <div class="text-[#483F3F] text-2xl font-bangers font-normal uppercase tracking-wider">HOME</div>
                     </div>
@@ -233,8 +233,8 @@
             <!-- --------------------------------------------- -->
             <!-- -------------- PRIZE SECTION ---------------- -->
             <!-- --------------------------------------------- -->
-            <div class="w-full max-w-[1280px] 2xl:max-w-[1600px] flex items-center justify-between h-96 mt-4 flex-wrap sm:flex-nowrap">
-                <div class="w-full h-full p-2 bg-[#483F3F] relative mr-0 sm:-mr-6 lg:-mr-11 2xl:-mr-[4.5rem] prize-wrapper-left-clip">
+            <div class="w-full max-w-[1280px] 2xl:max-w-[1600px] flex items-center justify-between h-full sm:h-96 mt-4 flex-wrap sm:flex-nowrap">
+                <div class="w-full h-full p-2 bg-[#483F3F] relative mr-0 sm:-mr-6 lg:-mr-11 2xl:-mr-[4.5rem] prize-wrapper-left-clip aspect-square sm:aspect-auto">
                     <img src="./asset/bg-blue.webp" class="object-center object-cover w-full h-full prize-wrapper-left-clip" />
                     <div class="absolute inset-0 flex items-center flex-col gap-4 justify-center">
                         <div class="relative text-6xl lg:text-7xl uppercase">
@@ -247,7 +247,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="w-full h-full p-2 bg-[#483F3F] -mt-11 sm:mt-0 relative prize-wrapper-right-clip">
+                <div class="w-full h-full p-2 bg-[#483F3F] -mt-11 sm:mt-0 relative prize-wrapper-right-clip aspect-square sm:aspect-auto">
                     <img src="./asset/bg-yellow.webp" class="object-center object-cover w-full h-full prize-wrapper-right-clip" />
                     <div class="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2">
                         <div class="relative text-3xl uppercase">
@@ -265,28 +265,28 @@
             <!-- --------------------------------------------- -->
             <!-- -------------- RULES SECTION ---------------- -->
             <!-- --------------------------------------------- -->
-            <div class="w-full max-w-[1280px] 2xl:max-w-[1600px] flex items-stretch justify-between mt-4 gap-2">
-                <div class="lg:w-3/12 2xl:w-3/12 bg-[#483F3F] p-2 rules-left-wrapper-clip lg:-mr-[5rem] 2xl:-mr-[9rem]">
-                    <div class="w-full h-full rules-left-inner-wrapper-clip bg-[url('../asset/bg-orange.webp')] bg-cover bg-center flex flex-col gap-0 justify-center">
-                        <div class="pl-16">
-                            <div class="relative text-6xl">
-                                <div class="relative z-10 bg-[url('../asset/bg-yellow-dots-vertical.webp')] bg-[length:28%] bg-[center_top_50%] bg-clip-text text-transparent">The</div>
-                                <div class="absolute z-0 top-0 text-stroke-16 text-stroke-gray">The</div>
+            <div class="w-full max-w-[1280px] 2xl:max-w-[1600px] flex items-stretch justify-between mt-4 gap-2 flex-wrap lg:flex-nowrap">
+                <div class="w-full lg:w-3/12 2xl:w-3/12 bg-[#483F3F] p-2 rules-left-wrapper-clip lg:-mr-[5rem] 2xl:-mr-[9rem] aspect-[5/2] sm:aspect-[10/2] xl:aspect-auto">
+                    <div class="w-full h-full rules-left-inner-wrapper-clip bg-[url('../asset/bg-orange.webp')] bg-cover bg-center flex flex-col gap-0 pt-2 justify-start xl:justify-center">
+                        <div class="xl:pl-16">
+                            <div class="relative text-4xl xl:text-6xl">
+                                <div class="relative z-10 text-center xl:text-left bg-[url('../asset/bg-yellow-dots-vertical.webp')] bg-[length:28%] bg-[center_top_50%] bg-clip-text text-transparent">The</div>
+                                <div class="absolute z-0 left-1/2 -translate-x-1/2 xl:left-0 xl:translate-x-0 top-0 text-stroke-16 text-stroke-gray">The</div>
                             </div>
-                            <div class="relative text-8xl">
-                                <div class="relative z-10 bg-[url('../asset/bg-yellow-dots-vertical.webp')] bg-[length:28%] bg-[center_top_50%] bg-clip-text text-transparent">Rules</div>
-                                <div class="absolute z-0 top-0 text-stroke-24 text-stroke-gray">Rules</div>
+                            <div class="relative text-6xl xl:text-8xl">
+                                <div class="relative z-10 text-center xl:text-left bg-[url('../asset/bg-yellow-dots-vertical.webp')] bg-[length:28%] bg-[center_top_50%] bg-clip-text text-transparent">Rules</div>
+                                <div class="absolute z-0 left-1/2 -translate-x-1/2 xl:left-0 xl:translate-x-0 top-0 text-stroke-24 text-stroke-gray">Rules</div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="flex-grow bg-[#483F3F] p-2 rules-right-wrapper-clip font-montserrat">
-                    <div class="w-full h-full rules-right-inner-wrapper-clip bg-[#ffef89] py-8 pl-48 flex flex-col gap-6 justify-between">
-                        <h3 class="text-xl font-medium list-item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, nulla?</h3>
-                        <h3 class="text-xl font-medium list-item ml-8">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, nulla?</h3>
-                        <h3 class="text-xl font-medium list-item ml-16">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, nulla?</h3>
-                        <h3 class="text-xl font-medium list-item ml-8">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, nulla?</h3>
-                        <h3 class="text-xl font-medium list-item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, nulla?</h3>
+                <div class="w-full xl:w-auto flex-grow bg-[#483F3F] p-2 rules-right-wrapper-clip font-montserrat -mt-[3.7rem] xl:mt-0 aspect-[2/2] sm:aspect-[4/2] xl:aspect-auto">
+                    <div class="w-full h-full rules-right-inner-wrapper-clip bg-[#ffef89] pl-2 pt-16 xl:pt-0 xl:py-8 xl:pl-48 flex flex-col xl:gap-6 justify-around text-sm xl:text-5xl">
+                        <h3 class="font-medium list-item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, nulla?</h3>
+                        <h3 class="font-medium list-item ml-8">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, nulla?</h3>
+                        <h3 class="font-medium list-item ml-16">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, nulla?</h3>
+                        <h3 class="font-medium list-item ml-8">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, nulla?</h3>
+                        <h3 class="font-medium list-item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, nulla?</h3>
                     </div>
                 </div>
             </div>
