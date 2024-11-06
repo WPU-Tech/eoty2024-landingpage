@@ -195,7 +195,7 @@
                 </div>
                 <div class="flex justify-end items-center max-w-[1280px] 2xl:max-w-[1600px] m-auto pt-48 lg:pt-12 pb-12 px-12">
                     <div class="hidden lg:block w-3/12 h-40"></div>
-                    <div id="games-section" class="splide relative flex gap-4 justify-end items-center">
+                    <div id="games-section" class="splide relative w-full flex gap-4 justify-end items-center">
                         <button id="prev" class="hidden lg:block w-auto p-2 mr-2 rounded-full bg-[#483F3F] stroke-white transition-transform duration-100 ease-out translate-y-0 active:translate-y-1">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" class="size-6">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
@@ -226,6 +226,18 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
                             </svg>
                         </button>
+                        <div class="absolute right-4 bottom-4 lg:hidden">
+                            <button id="prev-mobile" class="w-auto p-2 mr-2 rounded-full bg-[#483F3F] stroke-white transition-transform duration-100 ease-out translate-y-0 active:translate-y-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" class="size-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
+                                </svg>
+                            </button>
+                            <button id="next-mobile" class="w-auto p-2 rounded-full bg-[#483F3F] stroke-white transition-transform duration-100 ease-out translate-y-0 active:translate-y-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" class="size-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                                </svg>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -557,7 +569,9 @@
 
             const gamesSection = document.getElementById("games-section");
             const gamesNext = document.querySelector("#games-section #next");
+            const gamesNextMobile = document.querySelector("#games-section #next-mobile");
             const gamesPrev = document.querySelector("#games-section #prev");
+            const gamesPrevMobile = document.querySelector("#games-section #prev-mobile");
 
             let gamesSplide = new Splide(gamesSection, {
                 type: "loop",
@@ -571,6 +585,12 @@
                 gamesSplide.go(">");
             });
             gamesPrev.addEventListener("click", () => {
+                gamesSplide.go("<");
+            });
+            gamesNextMobile.addEventListener("click", () => {
+                gamesSplide.go(">");
+            });
+            gamesPrevMobile.addEventListener("click", () => {
                 gamesSplide.go("<");
             });
 
