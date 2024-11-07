@@ -243,22 +243,7 @@
                         </button>
                         <div class="w-full lg:w-7/12 relative bg-[#fff8ce] rounded-xl border-8 border-[#483f3f]" style="box-shadow: -8px 8px 0 #483f3f">
                             <div class="splide__track flex-1">
-                                <ul class="splide__list">
-                                    <li class="splide__slide p-12">
-                                        <h3 class="text-5xl text-[#0A48A9]">CSS Battle</h3>
-                                        <div class="font-montserrat mt-2 text-lg font-medium">
-                                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque, quas aspernatur ullam hic sint aperiam nulla necessitatibus vitae a? Dolorum iusto corporis quod quibusdam dicta cum cupiditate
-                                            quasi deleniti sequi!
-                                        </div>
-                                    </li>
-                                    <li class="splide__slide p-12">
-                                        <h3 class="text-5xl text-[#0A48A9]">JS Battle</h3>
-                                        <div class="font-montserrat mt-2 text-lg font-medium">
-                                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque, quas aspernatur ullam hic sint aperiam nulla necessitatibus vitae a? Dolorum iusto corporis quod quibusdam dicta cum cupiditate
-                                            quasi deleniti sequi!
-                                        </div>
-                                    </li>
-                                </ul>
+                                <ul id="games-splide-data" class="splide__list"></ul>
                             </div>
                         </div>
                         <button id="next" class="hidden lg:block w-auto p-2 rounded-full bg-[#483F3F] stroke-white transition-transform duration-100 ease-out translate-y-0 active:translate-y-1">
@@ -671,6 +656,21 @@
             ruleContainer.appendChild(ruleItem);
         };
 
+        const addGamesSlide = (splideContainer, item) => {
+            const wrapper = document.createElement("li");
+            const title = document.createElement("h3");
+            const description = document.createElement("div");
+
+            wrapper.className = "splide__slide p-12";
+            title.className = "text-5xl text-[#0A48A9]";
+            description.className = "font-montserrat mt-2 text-lg font-medium";
+
+            title.textContent = item.title;
+            description.textContent = item.description;
+            wrapper.append(title, description);
+            splideContainer.appendChild(wrapper);
+        };
+
         document.addEventListener("DOMContentLoaded", function () {
             const timelineSection = document.getElementById("timeline-section");
             timeline.forEach((item, index) => {
@@ -685,6 +685,11 @@
             const ruleSection = document.getElementById("rules-data");
             rules.forEach((item) => {
                 generateRuleItem(ruleSection, item);
+            });
+
+            const gamesDataSection = document.getElementById("games-splide-data");
+            games.forEach((item) => {
+                addGamesSlide(gamesDataSection, item);
             });
 
             const gamesSection = document.getElementById("games-section");
