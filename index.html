@@ -199,19 +199,19 @@
                     </div>
                     <div class="flex justify-center gap-4 lg:gap-8 flex-wrap">
                         <div class="relative z-10 rounded-xl text-center bg-[url('../asset/bg-orange.webp')] p-8 bg-cover bg-center" style="box-shadow: -8px 8px 0 #483f3f">
-                            <h3 class="text-8xl text-stroke-16 text-stroke-blue text-white text-stroke-outer">10</h3>
+                            <h3 id="timer-data-days" class="text-8xl text-stroke-16 text-stroke-blue text-white text-stroke-outer">10</h3>
                             <div class="text-3xl mt-2 text-stroke-8 text-stroke-blue text-white text-stroke-outer">Days</div>
                         </div>
                         <div class="relative z-10 rounded-xl text-center bg-[url('../asset/bg-orange.webp')] p-8 bg-cover bg-center" style="box-shadow: -8px 8px 0 #483f3f">
-                            <h3 class="text-8xl text-stroke-16 text-stroke-blue text-white text-stroke-outer">10</h3>
+                            <h3 id="timer-data-hours" class="text-8xl text-stroke-16 text-stroke-blue text-white text-stroke-outer">10</h3>
                             <div class="text-3xl mt-2 text-stroke-8 text-stroke-blue text-white text-stroke-outer">Hours</div>
                         </div>
                         <div class="relative z-10 rounded-xl text-center bg-[url('../asset/bg-orange.webp')] p-8 bg-cover bg-center" style="box-shadow: -8px 8px 0 #483f3f">
-                            <h3 class="text-8xl text-stroke-16 text-stroke-blue text-white text-stroke-outer">10</h3>
+                            <h3 id="timer-data-minutes" class="text-8xl text-stroke-16 text-stroke-blue text-white text-stroke-outer">10</h3>
                             <div class="text-3xl mt-2 text-stroke-8 text-stroke-blue text-white text-stroke-outer">Minutes</div>
                         </div>
                         <div class="relative z-10 rounded-xl text-center bg-[url('../asset/bg-orange.webp')] p-8 bg-cover bg-center" style="box-shadow: -8px 8px 0 #483f3f">
-                            <h3 class="text-8xl text-stroke-16 text-stroke-blue text-white text-stroke-outer">10</h3>
+                            <h3 id="timer-data-seconds" class="text-8xl text-stroke-16 text-stroke-blue text-white text-stroke-outer">10</h3>
                             <div class="text-3xl mt-2 text-stroke-8 text-stroke-blue text-white text-stroke-outer">Seconds</div>
                         </div>
                     </div>
@@ -803,6 +803,24 @@
                     refreshNav();
                 });
             });
+
+            // doomsday timer
+            const targetDate = new Date("2024-12-07T19:00:00").getTime();
+            const countdown = setInterval(() => {
+                const now = new Date().getTime();
+                const timeLeft = targetDate - now;
+
+                const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+                document.getElementById("timer-data-days").textContent = days.toString().padStart(2, "0");
+                document.getElementById("timer-data-hours").textContent = hours.toString().padStart(2, "0");
+                document.getElementById("timer-data-minutes").textContent = minutes.toString().padStart(2, "0");
+                document.getElementById("timer-data-seconds").textContent = seconds.toString().padStart(2, "0");
+                if (timeLeft < 0) clearInterval(countdown);
+            }, 1000);
         });
     </script>
 </html>
