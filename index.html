@@ -776,16 +776,6 @@
                 gamesSplide.go("<");
             });
 
-            const splideOptions = {
-                type: "loop",
-                pagination: false,
-                arrows: false,
-                gap: "1rem",
-                perMove: 1,
-                perPage: 6,
-                breakpoints: { 500: { perPage: 2 }, 650: { perPage: 3 }, 767: { perPage: 4, width: "100%" }, 1023: { perPage: 5, width: "95%" }, 1280: { perPage: 4 } },
-            };
-
             const sponsorsSlide = new Slider("#sponsors-section", sponsorsList);
             sponsorsSlide.mount();
 
