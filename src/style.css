@@ -994,3 +994,11 @@ html {
 .splide:not(.is-overflow) .splide__arrows {
     display: none;
 }
+
+.splide:not(.is-overflow) .splide__list {
+    justify-content: center;
+}
+
+.splide:not(.is-overflow) .splide__slide:last-child {
+    margin: 0 !important;
+}

@@ -339,12 +339,12 @@
             <!-- ------------ PARTNERS SECTION --------------- -->
             <!-- --------------------------------------------- -->
             <div id="partners" class="w-full max-w-[1280px] 2xl:max-w-[1600px] border-8 border-[#483F3F] relative mt-4 bg-[url('../asset/bg-yellow.webp')] bg-center bg-cover py-16">
-                <div class="w-full flex flex-col gap-8 justify-center items-center px-8 lg:px-12">
+                <div class="w-full flex flex-col gap-8 justify-center items-center px-6 lg:px-12">
                     <div class="text-4xl lg:text-7xl uppercase relative text-center">
                         <div class="relative z-10 px-2 bg-[url('../asset/bg-yellow-dots-vertical.webp')] bg-[length:20%] bg-[center_top_60%] text-transparent bg-clip-text">OUR SUPER SPONSORS</div>
                         <div class="absolute z-0 px-2 top-0 text-stroke-blue text-stroke-16">OUR SUPER SPONSORS</div>
                     </div>
-                    <div id="sponsors-section" class="splide relative flex gap-4 items-center w-full px-1.5">
+                    <div id="sponsors-section" class="splide relative flex gap-3 items-center w-full px-1.5">
                         <button id="prev" class="block w-auto p-2 rounded-full bg-[#483F3F] stroke-white transition-transform duration-100 ease-out translate-y-0 active:translate-y-1">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" class="size-4 lg:size-6">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
@@ -369,7 +369,7 @@
                         <div class="relative z-10 px-2 bg-[url('../asset/bg-yellow-dots-vertical.webp')] bg-[length:20%] bg-[center_top_60%] text-transparent bg-clip-text">OUR SUPER PARTNERS</div>
                         <div class="absolute z-0 px-2 top-0 text-stroke-blue text-stroke-16">OUR SUPER PARTNERS</div>
                     </div>
-                    <div id="partners-section" class="splide relative flex gap-4 items-center w-full px-1.5">
+                    <div id="partners-section" class="splide relative flex gap-3 items-center w-full px-1.5">
                         <button id="prev" class="block w-auto p-2 rounded-full bg-[#483F3F] stroke-white transition-transform duration-100 ease-out translate-y-0 active:translate-y-1">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" class="size-4 lg:size-6">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
@@ -521,27 +521,9 @@
             },
         ];
 
-        const sponsorsList = [
-            "https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png",
-            "https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png",
-            "https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png",
-            "https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png",
-            "https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png",
-            "https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png",
-            "https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png",
-            "https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png",
-        ];
+        const sponsorsList = ["/asset/logos/jetbrains.png"];
 
-        const partnersList = [
-            "https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png",
-            "https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png",
-            "https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png",
-            "https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png",
-            "https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png",
-            "https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png",
-            "https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png",
-            "https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png",
-        ];
+        const partnersList = ["/asset/logos/jetbrains.png"];
 
         const generateTimelineItem = (timelineContainer, item, position) => {
             const { title, date, description } = item;
@@ -633,21 +615,96 @@
             });
         };
 
-        const addSplideSlide = (splide, src) => {
-            const slide = document.createElement("li");
-            slide.className = "splide__slide flex items-center justify-center";
+        class Slider {
+            constructor(containerSelector, values) {
+                this.values = values;
+                this.options = {
+                    type: "loop",
+                    pagination: false,
+                    arrows: false,
+                    gap: "1rem",
+                    perMove: 1,
+                    perPage: 6,
+                    width: "95%",
+                    breakpoints: { 500: { perPage: 2 }, 650: { perPage: 3 }, 840: { perPage: 4 }, 1023: { perPage: 5, width: "100%" }, 1040: { perPage: 4 }, 1280: { perPage: 5, width: "95%" } },
+                };
+                this.container = document.querySelector(containerSelector);
+                this.nextButton = this.container.querySelector("#next");
+                this.prevButton = this.container.querySelector("#prev");
 
-            const imageWrapper = document.createElement("div");
-            imageWrapper.className = "size-20 min-w-20 lg:size-36 lg:min-w-36 rounded-full border-4 lg:border-8 border-[#483F3F] flex items-center justify-center overflow-hidden";
-            const img = document.createElement("img");
-            img.src = src;
-            img.alt = "";
-            img.className = "w-full h-full object-cover";
-            imageWrapper.appendChild(img);
+                this.splide = new Splide(this.container, this.options);
+                this.Components = this.splide.Components;
 
-            slide.appendChild(imageWrapper);
-            splide.add(slide);
-        };
+                this.#init();
+            }
+
+            addSplideSlide(src) {
+                const slide = document.createElement("li");
+                slide.className = "splide__slide flex items-center justify-center";
+
+                const imageWrapper = document.createElement("div");
+                imageWrapper.className = "size-24 min-w-24 sm:size-28 sm:min-w-28 lg:size-36 lg:min-w-36 rounded-full border-4 lg:border-8 border-[#483F3F] flex items-center justify-center overflow-hidden bg-[#FFFACE]";
+
+                const img = document.createElement("img");
+                img.src = src;
+                img.alt = "";
+                img.className = "w-full h-full object-contain p-2";
+                imageWrapper.appendChild(img);
+
+                slide.appendChild(imageWrapper);
+                this.splide.add(slide);
+            }
+
+            #init() {
+                this.splide.on("overflow", this.#onOverflow.bind(this));
+                this.splide.on("resized", this.#onResized.bind(this));
+            }
+
+            mount() {
+                this.splide.mount();
+
+                this.nextButton.addEventListener("click", () => {
+                    this.splide.go(">");
+                });
+
+                this.prevButton.addEventListener("click", () => {
+                    this.splide.go("<");
+                });
+
+                this.values.forEach((src) => {
+                    this.addSplideSlide(src);
+                });
+            }
+
+            #onOverflow(isOverflow) {
+                this.splide.go(0);
+
+                this.nextButton.style.display = isOverflow ? "block" : "none";
+                this.prevButton.style.display = isOverflow ? "block" : "none";
+
+                this.splide.options = {
+                    drag: isOverflow,
+                    clones: isOverflow ? undefined : 0,
+                };
+            }
+
+            #onResized() {
+                let isOverflow = this.Components.Layout.isOverflow();
+                let list = this.Components.Elements.list;
+                let lastSlide = this.Components.Slides.getAt(this.splide.length - 1);
+
+                if (lastSlide) {
+                    list.style.justifyContent = isOverflow ? "" : "center";
+
+                    if (!isOverflow) {
+                        lastSlide.slide.style.marginRight = "";
+                        list.classList.add("!translate-x-0");
+                    } else {
+                        list.classList.remove("!translate-x-0");
+                    }
+                }
+            }
+        }
 
         const generateRuleItem = (ruleContainer, item) => {
             const ruleItem = document.createElement("h3");
@@ -725,46 +782,15 @@
                 arrows: false,
                 gap: "1rem",
                 perMove: 1,
-                width: "95%",
                 perPage: 6,
-                breakpoints: { 500: { perPage: 2 }, 650: { perPage: 3 }, 767: { perPage: 4 }, 1023: { perPage: 5 }, 1280: { perPage: 4 } },
+                breakpoints: { 500: { perPage: 2 }, 650: { perPage: 3 }, 767: { perPage: 4, width: "100%" }, 1023: { perPage: 5, width: "95%" }, 1280: { perPage: 4 } },
             };
 
-            const sponsorsSection = document.getElementById("sponsors-section");
-            const sponsorsNext = document.querySelector("#sponsors-section #next");
-            const sponsorsPrev = document.querySelector("#sponsors-section #prev");
+            const sponsorsSlide = new Slider("#sponsors-section", sponsorsList);
+            sponsorsSlide.mount();
 
-            let sponsorsSplide = new Splide(sponsorsSection, splideOptions);
-
-            sponsorsSplide.mount();
-            sponsorsNext.addEventListener("click", () => {
-                sponsorsSplide.go(">");
-            });
-            sponsorsPrev.addEventListener("click", () => {
-                sponsorsSplide.go("<");
-            });
-
-            sponsorsList.forEach((src) => {
-                addSplideSlide(sponsorsSplide, src);
-            });
-
-            const partnersSection = document.getElementById("partners-section");
-            const partnersNext = document.querySelector("#partners-section #next");
-            const partnersPrev = document.querySelector("#partners-section #prev");
-
-            let partnersSplide = new Splide(partnersSection, splideOptions);
-
-            partnersSplide.mount();
-            partnersNext.addEventListener("click", () => {
-                partnersSplide.go(">");
-            });
-            partnersPrev.addEventListener("click", () => {
-                partnersSplide.go("<");
-            });
-
-            partnersList.forEach((src) => {
-                addSplideSlide(partnersSplide, src);
-            });
+            const partnersSlide = new Slider("#partners-section", partnersList);
+            partnersSlide.mount();
 
             let navState = false;
             const navClose = document.querySelector("#nav-close");
