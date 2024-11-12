@@ -344,7 +344,7 @@
                         <div class="relative z-10 px-2 bg-[url('../asset/bg-yellow-dots-vertical.webp')] bg-[length:20%] bg-[center_top_60%] text-transparent bg-clip-text">OUR SUPER SPONSORS</div>
                         <div class="absolute z-0 px-2 top-0 text-stroke-blue text-stroke-16">OUR SUPER SPONSORS</div>
                     </div>
-                    <div id="sponsors-section" class="splide relative flex gap-3 items-center w-full px-1.5">
+                    <div id="sponsors-section" class="splide relative flex gap-4 md:gap-8 items-center w-full px-1.5">
                         <button id="prev" class="block w-auto p-2 rounded-full bg-[#483F3F] stroke-white transition-transform duration-100 ease-out translate-y-0 active:translate-y-1">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" class="size-4 lg:size-6">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
@@ -369,7 +369,7 @@
                         <div class="relative z-10 px-2 bg-[url('../asset/bg-yellow-dots-vertical.webp')] bg-[length:20%] bg-[center_top_60%] text-transparent bg-clip-text">OUR SUPER PARTNERS</div>
                         <div class="absolute z-0 px-2 top-0 text-stroke-blue text-stroke-16">OUR SUPER PARTNERS</div>
                     </div>
-                    <div id="partners-section" class="splide relative flex gap-3 items-center w-full px-1.5">
+                    <div id="partners-section" class="splide relative flex gap-4 md:gap-8 items-center w-full px-1.5">
                         <button id="prev" class="block w-auto p-2 rounded-full bg-[#483F3F] stroke-white transition-transform duration-100 ease-out translate-y-0 active:translate-y-1">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" class="size-4 lg:size-6">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
@@ -521,9 +521,46 @@
             },
         ];
 
-        const sponsorsList = ["/asset/logos/jetbrains.png"];
+        const sponsorsList = [
+            {
+                src: "/asset/logos/jetbrains.png",
+                width: 300,
+                href: "https://jetbrains.com/",
+            },
+        ];
 
-        const partnersList = ["/asset/logos/jetbrains.png"];
+        const partnersList = [
+            {
+                src: "/asset/logos/skill_issue-logo-black-4k.svg",
+                width: 100,
+                href: "https://skill-issue.org/",
+            },
+            {
+                src: "/asset/logos/kelas-terbuka.jpg",
+                width: 75,
+                href: "https://www.youtube.com/@KelasTerbuka",
+            },
+            {
+                src: "/asset/logos/logo-petanikode-dark.png",
+                width: 150,
+                href: "https://www.petanikode.com/",
+            },
+            {
+                src: "/asset/logos/surabaya-dev.png",
+                width: 150,
+                href: "https://surabayadev.org/",
+            },
+            {
+                src: "/asset/logos/Tegal.dev-A.png",
+                width: 150,
+                href: "https://www.instagram.com/tegal.dev/",
+            },
+            {
+                src: "/asset/logos/Logo IDX Color 1.svg",
+                width: 150,
+                href: "https://www.facebook.com/groups/indoxploitpublic/",
+            },
+        ];
 
         const generateTimelineItem = (timelineContainer, item, position) => {
             const { title, date, description } = item;
@@ -622,11 +659,13 @@
                     type: "loop",
                     pagination: false,
                     arrows: false,
-                    gap: "1rem",
+                    gap: "2rem",
                     perMove: 1,
-                    perPage: 6,
                     width: "95%",
-                    breakpoints: { 500: { perPage: 2 }, 650: { perPage: 3 }, 840: { perPage: 4 }, 1023: { perPage: 5, width: "100%" }, 1040: { perPage: 4 }, 1280: { perPage: 5, width: "95%" } },
+                    height: "156px",
+                    autoWidth: true,
+                    autoplay: true,
+                    interval: 2000,
                 };
                 this.container = document.querySelector(containerSelector);
                 this.nextButton = this.container.querySelector("#next");
@@ -638,17 +677,20 @@
                 this.#init();
             }
 
-            addSplideSlide(src) {
+            addSplideSlide(image) {
                 const slide = document.createElement("li");
                 slide.className = "splide__slide flex items-center justify-center";
+                slide.style.width = `${image.width}px`;
 
-                const imageWrapper = document.createElement("div");
-                imageWrapper.className = "size-24 min-w-24 sm:size-28 sm:min-w-28 lg:size-36 lg:min-w-36 rounded-full border-4 lg:border-8 border-[#483F3F] flex items-center justify-center overflow-hidden bg-[#FFFACE]";
+                const imageWrapper = document.createElement("a");
+                imageWrapper.href = image.href;
+                imageWrapper.target = "_blank";
 
                 const img = document.createElement("img");
-                img.src = src;
+                img.src = image.src;
                 img.alt = "";
-                img.className = "w-full h-full object-contain p-2";
+                img.className = "object-contain";
+                img.style.width = `${image.width}px`;
                 imageWrapper.appendChild(img);
 
                 slide.appendChild(imageWrapper);
@@ -662,6 +704,7 @@
 
             mount() {
                 this.splide.mount();
+                this.Components.Autoplay.play();
 
                 this.nextButton.addEventListener("click", () => {
                     this.splide.go(">");
@@ -671,8 +714,8 @@
                     this.splide.go("<");
                 });
 
-                this.values.forEach((src) => {
-                    this.addSplideSlide(src);
+                this.values.forEach((image) => {
+                    this.addSplideSlide(image);
                 });
             }
 
