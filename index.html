@@ -569,6 +569,7 @@
 
         const sponsorsList = [
             {
+                name: "JetBrains",
                 src: "/asset/logos/jetbrains.png",
                 width: 300,
                 href: "https://jetbrains.com/",
@@ -577,35 +578,53 @@
 
         const partnersList = [
             {
+                name: "Skill Issue",
                 src: "/asset/logos/skill_issue-logo-black-4k.svg",
                 width: 90,
                 href: "https://skill-issue.org/",
             },
             {
+                name: "Kelas Terbuka",
                 src: "/asset/logos/kelas-terbuka.jpg",
                 width: 75,
                 href: "https://www.youtube.com/@KelasTerbuka",
             },
             {
+                name: "Petani Kode",
                 src: "/asset/logos/logo-petanikode-dark.png",
                 width: 100,
                 href: "https://www.petanikode.com/",
             },
             {
+                name: "SurabayaDev",
                 src: "/asset/logos/surabaya-dev.png",
                 width: 150,
                 href: "https://surabayadev.org/",
             },
             {
+                name: "Tegal Dev",
                 src: "/asset/logos/Tegal.dev-A.png",
-                width: 150,
+                width: 125,
                 href: "https://www.instagram.com/tegal.dev/",
             },
             {
+                name: "BandungDev",
+                src: "/asset/logos/bandungdev-logo-text-black.svg",
+                width: 200,
+                href: "https://bandungdev.com/",
+            },
+            {
+                name: "IndoXploit",
                 src: "/asset/logos/Logo IDX Color 1.svg",
                 width: 150,
                 href: "https://www.facebook.com/groups/indoxploitpublic/",
             },
+            {
+                name: "Business Initiative Movement",
+                src: "/asset/logos/LOGO BIM 2019.png",
+                width: 75,
+                href: "https://www.instagram.com/businessinitiative.id/",
+            }
         ];
 
         const generateTimelineItem = (timelineContainer, item, position) => {
@@ -734,7 +753,7 @@
 
                 const img = document.createElement("img");
                 img.src = image.src;
-                img.alt = "";
+                img.alt = image.name;
                 img.className = "object-contain";
                 img.style.width = `${image.width}px`;
                 imageWrapper.appendChild(img);
