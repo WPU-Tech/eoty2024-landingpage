@@ -1,0 +1,27 @@
+name: remote ssh command
+on:
+    workflow_dispatch:
+    push:
+        branches:
+            - master
+
+jobs:
+    build:
+        name: Build
+        runs-on: debian-latest
+        steps:
+            - name: executing remote ssh commands using password
+              uses: appleboy/ssh-action@v1.2.0
+              with:
+                  host: ${{ secrets.HOST }}
+                  username: ${{ secrets.USERNAME }}
+                  password: ${{ secrets.PASSWORD }}
+                  port: ${{ secrets.PORT }}
+                  script: |
+                    cd /container/wpurun/eoty2024-landingpage 
+                    sudo git reset --hard HEAD
+                    sudo git clean -f -d
+                    sudo git pull
+                    sudo npm install
+                    sudo npm run build
+
