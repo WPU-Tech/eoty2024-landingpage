@@ -10,12 +10,12 @@ jobs:
         name: Build
         runs-on: ubuntu-latest
         steps:
-            - name: executing remote ssh commands using password
+            - name: executing remote ssh commands using private key
               uses: appleboy/ssh-action@v1.2.0
               with:
                   host: ${{ secrets.HOST }}
                   username: ${{ secrets.USERNAME }}
-                  password: ${{ secrets.PASSWORD }}
+                  key: ${{ secrets.KEY }}
                   port: ${{ secrets.PORT }}
                   script: |
                     cd /container/wpurun/eoty2024-landingpage 
