@@ -5,6 +5,7 @@ module.exports = {
         extend: {
             fontFamily: {
                 montserrat: '"Montserrat", sans-serif',
+                bangers: '"Bangers", sans-serif',
             },
         },
     },
