@@ -48,22 +48,22 @@ html {
 
 @layer components {
     .code-hero-wrapper-clip {
-        clip-path: polygon(99.934% 77.89%, 0.066% 98%, 0.066% 19.5%, 100% 0%);
+        clip-path: polygon(99.934% 77.89%, 0.066% 98%, 0.066% 15.8%, 100% 0%);
     }
     .code-hero-inner-wrapper-clip {
-        clip-path: polygon(100% 77%, 0% 97.7%, 0% 20%, 100% 0%);
+        clip-path: polygon(100% 77%, 0% 97.7%, 0% 16%, 100% 0%);
     }
     .join-the-mission-wrapper-clip {
-        clip-path: polygon(99.922% 91.921%, 0% 83.256%, 0% 15.937%, 99.922% 0%, 99.922% 99.921%);
+        clip-path: polygon(99.922% 91.921%, 0% 83.256%, 0% 13%, 100% 0%, 99.922% 99.921%);
     }
     .join-the-mission-wrapper-inner-clip {
-        clip-path: polygon(100.922% 91.4%, 0% 83%, 0% 15.937%, 99.922% 0%, 99.922% 98.921%);
+        clip-path: polygon(100.922% 91.4%, 0% 83%, 0% 13.2%, 99.922% 0.2%, 99.922% 98.921%);
     }
     .contact-person-wrapper-clip {
-        clip-path: polygon(100% 99.832%, 0.035% 99.832%, 0.035% 0%, 100% 22.313%, 100% 99.832%);
+        clip-path: polygon(100% 99.832%, 0.035% 99.832%, 0.035% 0%, 100% 26.313%, 100% 99.832%);
     }
     .contact-person-inner-wrapper-clip {
-        clip-path: polygon(100% 99.832%, 0.035% 99.832%, 0.035% 0%, 100% 23.313%, 100% 99.832%);
+        clip-path: polygon(100% 99.832%, 0.035% 99.832%, 0.035% 0%, 100% 28.313%, 100% 99.832%);
     }
     .prize-wrapper-left-clip {
         clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 86%, 0% 0%);
@@ -136,16 +136,16 @@ html {
         );
     }
     .rules-left-wrapper-clip {
-        clip-path: polygon(100% 0%, 100% 62.027%, 50% 100%, 0% 69.388%, 0% 0%, 100% 0%);
+        clip-path: polygon(100% 0%, 100% 69%, 50% 100%, 0% 69%, 0% 0%, 100% 0%);
     }
     .rules-left-inner-wrapper-clip {
-        clip-path: polygon(100% 0%, 100% 59.027%, 50% 100%, 0% 66.388%, 0% 0%, 100% 0%);
+        clip-path: polygon(100% 0%, 100% 66%, 50% 99%, 0% 66%, 0% 0%, 100% 0%);
     }
     .rules-right-wrapper-clip {
-        clip-path: polygon(100% 0%, 100% 100%, 0% 100%, 0% 3.141%, 50.014% 16.751%, 100% 0%);
+        clip-path: polygon(100% 0%, 100% 100%, 0% 100%, 0% 0%, 50% 13%, 100% 0%);
     }
     .rules-right-inner-wrapper-clip {
-        clip-path: polygon(100% 0%, 100% 100%, 0% 100%, 0% 4.441%, 50% 17.551%, 100% 1%);
+        clip-path: polygon(100% 0%, 100% 100%, 0% 100%, 0% 1.5%, 50% 14%, 100% 1.5%);
     }
     /* ---- sm screen -------- */
     @media (min-width: 640px) {

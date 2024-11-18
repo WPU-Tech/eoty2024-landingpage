@@ -601,27 +601,27 @@ video {
 }
 
 .code-hero-wrapper-clip {
-  clip-path: polygon(99.934% 77.89%, 0.066% 98%, 0.066% 19.5%, 100% 0%);
+  clip-path: polygon(99.934% 77.89%, 0.066% 98%, 0.066% 15.8%, 100% 0%);
 }
 
 .code-hero-inner-wrapper-clip {
-  clip-path: polygon(100% 77%, 0% 97.7%, 0% 20%, 100% 0%);
+  clip-path: polygon(100% 77%, 0% 97.7%, 0% 16%, 100% 0%);
 }
 
 .join-the-mission-wrapper-clip {
-  clip-path: polygon(99.922% 91.921%, 0% 83.256%, 0% 15.937%, 99.922% 0%, 99.922% 99.921%);
+  clip-path: polygon(99.922% 91.921%, 0% 83.256%, 0% 13%, 100% 0%, 99.922% 99.921%);
 }
 
 .join-the-mission-wrapper-inner-clip {
-  clip-path: polygon(100.922% 91.4%, 0% 83%, 0% 15.937%, 99.922% 0%, 99.922% 98.921%);
+  clip-path: polygon(100.922% 91.4%, 0% 83%, 0% 13.2%, 99.922% 0.2%, 99.922% 98.921%);
 }
 
 .contact-person-wrapper-clip {
-  clip-path: polygon(100% 99.832%, 0.035% 99.832%, 0.035% 0%, 100% 22.313%, 100% 99.832%);
+  clip-path: polygon(100% 99.832%, 0.035% 99.832%, 0.035% 0%, 100% 26.313%, 100% 99.832%);
 }
 
 .contact-person-inner-wrapper-clip {
-  clip-path: polygon(100% 99.832%, 0.035% 99.832%, 0.035% 0%, 100% 23.313%, 100% 99.832%);
+  clip-path: polygon(100% 99.832%, 0.035% 99.832%, 0.035% 0%, 100% 28.313%, 100% 99.832%);
 }
 
 .prize-wrapper-left-clip {
@@ -697,19 +697,19 @@ video {
 }
 
 .rules-left-wrapper-clip {
-  clip-path: polygon(100% 0%, 100% 62.027%, 50% 100%, 0% 69.388%, 0% 0%, 100% 0%);
+  clip-path: polygon(100% 0%, 100% 69%, 50% 100%, 0% 69%, 0% 0%, 100% 0%);
 }
 
 .rules-left-inner-wrapper-clip {
-  clip-path: polygon(100% 0%, 100% 59.027%, 50% 100%, 0% 66.388%, 0% 0%, 100% 0%);
+  clip-path: polygon(100% 0%, 100% 66%, 50% 99%, 0% 66%, 0% 0%, 100% 0%);
 }
 
 .rules-right-wrapper-clip {
-  clip-path: polygon(100% 0%, 100% 100%, 0% 100%, 0% 3.141%, 50.014% 16.751%, 100% 0%);
+  clip-path: polygon(100% 0%, 100% 100%, 0% 100%, 0% 0%, 50% 13%, 100% 0%);
 }
 
 .rules-right-inner-wrapper-clip {
-  clip-path: polygon(100% 0%, 100% 100%, 0% 100%, 0% 4.441%, 50% 17.551%, 100% 1%);
+  clip-path: polygon(100% 0%, 100% 100%, 0% 100%, 0% 1.5%, 50% 14%, 100% 1.5%);
 }
 
 /* ---- sm screen -------- */
@@ -1525,6 +1525,10 @@ video {
   bottom: 0px;
 }
 
+.bottom-2{
+  bottom: 0.5rem;
+}
+
 .bottom-4{
   bottom: 1rem;
 }
@@ -1551,6 +1555,10 @@ video {
 
 .right-0{
   right: 0px;
+}
+
+.right-2{
+  right: 0.5rem;
 }
 
 .right-4{
@@ -1601,6 +1609,11 @@ video {
   margin: auto;
 }
 
+.\!mx-auto{
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
 .-mx-4{
   margin-left: -1rem;
   margin-right: -1rem;
@@ -1611,28 +1624,32 @@ video {
   margin-right: auto;
 }
 
+.-mt-1{
+  margin-top: -0.25rem;
+}
+
 .-mt-11{
   margin-top: -2.75rem;
-}
-
-.-mt-16{
-  margin-top: -4rem;
-}
-
-.-mt-3{
-  margin-top: -0.75rem;
 }
 
 .-mt-6{
   margin-top: -1.5rem;
 }
 
-.-mt-\[4rem\]{
-  margin-top: -4rem;
+.-mt-\[13\%\]{
+  margin-top: -13%;
 }
 
-.-mt-\[5\.5rem\]{
-  margin-top: -5.5rem;
+.-mt-\[15\%\]{
+  margin-top: -15%;
+}
+
+.-mt-\[24\%\]{
+  margin-top: -24%;
+}
+
+.-mt-\[25\%\]{
+  margin-top: -25%;
 }
 
 .mb-8{
@@ -1663,10 +1680,6 @@ video {
   margin-top: 2rem;
 }
 
-.mt-\[-4\.2rem\]{
-  margin-top: -4.2rem;
-}
-
 .block{
   display: block;
 }
@@ -1681,10 +1694,6 @@ video {
 
 .hidden{
   display: none;
-}
-
-.aspect-\[110\/115\]{
-  aspect-ratio: 110/115;
 }
 
 .aspect-\[2\/2\]{
@@ -1711,8 +1720,8 @@ video {
   aspect-ratio: 6/4;
 }
 
-.aspect-\[75\/64\]{
-  aspect-ratio: 75/64;
+.aspect-\[7\/11\]{
+  aspect-ratio: 7/11;
 }
 
 .aspect-square{
@@ -1737,6 +1746,10 @@ video {
 .size-6{
   width: 1.5rem;
   height: 1.5rem;
+}
+
+.\!h-auto{
+  height: auto !important;
 }
 
 .h-0\.5{
@@ -1807,8 +1820,8 @@ video {
   width: 25%;
 }
 
-.w-40{
-  width: 10rem;
+.w-36{
+  width: 9rem;
 }
 
 .w-6{
@@ -2328,6 +2341,11 @@ video {
   padding-bottom: 1.5rem;
 }
 
+.py-8{
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
 .pb-12{
   padding-bottom: 3rem;
 }
@@ -2376,10 +2394,6 @@ video {
   padding-top: 0.25rem;
 }
 
-.pt-16{
-  padding-top: 4rem;
-}
-
 .pt-2{
   padding-top: 0.5rem;
 }
@@ -2388,16 +2402,16 @@ video {
   padding-top: 5rem;
 }
 
-.pt-3{
-  padding-top: 0.75rem;
-}
-
 .pt-48{
   padding-top: 12rem;
 }
 
 .pt-5{
   padding-top: 1.25rem;
+}
+
+.pt-7{
+  padding-top: 1.75rem;
 }
 
 .pt-8{
@@ -2442,13 +2456,20 @@ video {
   line-height: 1;
 }
 
-.text-8xl{
-  font-size: 6rem;
-  line-height: 1;
+.text-\[\.9rem\]{
+  font-size: .9rem;
 }
 
 .text-\[16px\]{
   font-size: 16px;
+}
+
+.text-\[2\.8rem\]{
+  font-size: 2.8rem;
+}
+
+.text-\[36px\]{
+  font-size: 36px;
 }
 
 .text-\[4\.5rem\]{
@@ -2462,11 +2483,6 @@ video {
 .text-lg{
   font-size: 1.125rem;
   line-height: 1.75rem;
-}
-
-.text-sm{
-  font-size: 0.875rem;
-  line-height: 1.25rem;
 }
 
 .text-xl{
@@ -2777,6 +2793,26 @@ video {
 }
 
 @media (min-width: 640px){
+  .sm\:mx-0{
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  .sm\:mx-2{
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+
+  .sm\:\!mx-2{
+    margin-left: 0.5rem !important;
+    margin-right: 0.5rem !important;
+  }
+
+  .sm\:\!mx-4{
+    margin-left: 1rem !important;
+    margin-right: 1rem !important;
+  }
+
   .sm\:-mr-6{
     margin-right: -1.5rem;
   }
@@ -2795,6 +2831,14 @@ video {
 
   .sm\:mt-0{
     margin-top: 0px;
+  }
+
+  .sm\:mt-4{
+    margin-top: 1rem;
+  }
+
+  .sm\:block{
+    display: block;
   }
 
   .sm\:aspect-\[10\/2\]{
@@ -2825,6 +2869,10 @@ video {
     min-height: 0px;
   }
 
+  .sm\:w-40{
+    width: 10rem;
+  }
+
   .sm\:w-8{
     width: 2rem;
   }
@@ -2847,8 +2895,17 @@ video {
     flex-wrap: nowrap;
   }
 
+  .sm\:whitespace-nowrap{
+    white-space: nowrap;
+  }
+
   .sm\:p-4{
     padding: 1rem;
+  }
+
+  .sm\:py-16{
+    padding-top: 4rem;
+    padding-bottom: 4rem;
   }
 
   .sm\:pb-16{
@@ -2865,6 +2922,11 @@ video {
 
   .sm\:pt-10{
     padding-top: 2.5rem;
+  }
+
+  .sm\:text-8xl{
+    font-size: 6rem;
+    line-height: 1;
   }
 
   .sm\:text-\[52px\]{
@@ -2932,10 +2994,6 @@ video {
     justify-content: space-between;
   }
 
-  .md\:gap-4{
-    gap: 1rem;
-  }
-
   .md\:gap-8{
     gap: 2rem;
   }
@@ -2993,6 +3051,10 @@ video {
 
   .lg\:mt-0{
     margin-top: 0px;
+  }
+
+  .lg\:mt-4{
+    margin-top: 1rem;
   }
 
   .lg\:mt-\[-13rem\]{
@@ -3075,6 +3137,10 @@ video {
 
   .lg\:w-auto{
     width: auto;
+  }
+
+  .lg\:w-full{
+    width: 100%;
   }
 
   .lg\:min-w-8{
