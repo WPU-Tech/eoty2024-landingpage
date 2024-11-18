@@ -2921,6 +2921,10 @@ video {
     display: block;
   }
 
+  .sm\:hidden{
+    display: none;
+  }
+
   .sm\:aspect-\[10\/2\]{
     aspect-ratio: 10/2;
   }
