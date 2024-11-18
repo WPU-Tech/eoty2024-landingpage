@@ -3400,6 +3400,10 @@ video {
     padding-left: 500px;
   }
 
+  .xl\:pl-8{
+    padding-left: 2rem;
+  }
+
   .xl\:text-left{
     text-align: left;
   }
@@ -3457,6 +3461,10 @@ video {
 
   .\32xl\:max-w-\[1600px\]{
     max-width: 1600px;
+  }
+
+  .\32xl\:pl-16{
+    padding-left: 4rem;
   }
 
   .\32xl\:text-\[5rem\]{
