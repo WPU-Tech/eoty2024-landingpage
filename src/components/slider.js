@@ -10,8 +10,9 @@ class Slider {
             width: "95%",
             height: "156px",
             autoWidth: true,
-            autoplay: true,
             interval: 2000,
+            autoplay: true,
+            pauseOnHover: false,
         };
         this.container = document.querySelector(containerSelector);
 
@@ -58,7 +59,6 @@ class Slider {
 
     mount() {
         this.splide.mount();
-        this.Components.Autoplay.play();
 
         this.nextButtons.forEach((button) => {
             button.addEventListener("click", () => {
@@ -75,6 +75,7 @@ class Slider {
         this.values.forEach((image) => {
             this.addSplideSlide(image);
         });
+        this.Components.Autoplay.play();
     }
 
     #onOverflow(isOverflow) {

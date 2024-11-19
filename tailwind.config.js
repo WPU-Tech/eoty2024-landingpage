@@ -3,6 +3,9 @@ module.exports = {
     content: ["./index.html", "./register/**/*.{js,html}", "./src/**/*.{js,html}"],
     theme: {
         extend: {
+            screens: {
+                xs: "375px",
+            },
             fontFamily: {
                 montserrat: '"Montserrat", sans-serif',
                 bangers: '"Bangers", sans-serif',
