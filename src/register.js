@@ -121,6 +121,10 @@ const renderContent = async (accessToken, tokenType) => {
                     <p id="source-error" class="font-montserrat text-red-500 text-sm hidden"></p>
                 </div>
 
+                <p class="text-gray-500 text-sm font-montserrat font-semibold xl:hidden">
+                    * Please ensure your details are accurate as these will be used for your certificate.
+                </p>
+
                 <button
                     type="submit"
                     class="uppercase text-lg tracking-wider flex items-center justify-center w-full p-2 gap-2 text-white bg-[#FF5508] disabled:opacity-50 rounded border-4 border-[#483f3f] transition-all ease-out shadow-[-2px_2px_0px_#483F3F] hover:shadow-[0px_0px_0px_#483F3F]"
@@ -129,10 +133,6 @@ const renderContent = async (accessToken, tokenType) => {
                 </button>
 
                 <p id="message-box" data-state="unknown" class="data-[state=unknown]:hidden w-full rounded border bg-gray-100 data-[state=error]:border-red-600 data-[state=error]:bg-red-100 data-[state=success]:border-green-600 data-[state=success]:bg-green-100 flex flex-col gap-0.5 p-4 text-center font-montserrat text-sm">
-                </p>
-
-                <p class="text-gray-500 text-sm font-montserrat font-semibold">
-                    * Please ensure your details are accurate as these will be used for your certificate.
                 </p>
             `;
 

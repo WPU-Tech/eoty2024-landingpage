@@ -116,20 +116,56 @@
 
             <div
                 id="register-section"
-                class="w-full flex justify-center items-center max-w-[1280px] 2xl:max-w-[1600px] border-8 border-[#483F3F] relative [--margin-top:0.5rem] sm:[--margin-top:1rem] mt-[var(--margin-top)] min-h-[calc(100dvh-var(--margin-top)-85px-266px)] bg-[url('/assets/bg-blue.webp')] bg-center bg-cover py-16"
+                class="w-full relative max-w-[1280px] 2xl:max-w-[1600px] flex items-stretch justify-between [--margin-top:0.5rem] sm:[--margin-top:1rem] mt-[var(--margin-top)] min-h-[calc(100dvh-var(--margin-top)-85px-266px)]"
             >
-                <div class="w-full flex flex-col gap-8 justify-center items-center px-6 lg:px-12">
-                    <div class="text-6xl lg:text-7xl uppercase relative text-center">
-                        <div class="relative z-10 px-2 bg-[url('/assets/bg-yellow-dots-vertical.webp')] bg-[length:20%] bg-[center_top_60%] text-transparent bg-clip-text">REGISTRATION</div>
-                        <div class="absolute z-0 px-2 top-0 text-stroke-gray text-stroke-16">REGISTRATION</div>
+                <div class="w-full h-full p-2 bg-[#483F3F] relative lg:-mr-11 register-wrapper-left-clip">
+                    <div class="flex items-center flex-col gap-8 xl:gap-4 justify-center px-6 xl:px-0 register-wrapper-left-clip bg-[url('/assets/bg-blue.webp')] bg-center bg-cover py-16 min-h-[calc(100dvh-var(--margin-top)-85px-266px)]">
+                        <div class="text-6xl lg:text-7xl uppercase relative text-center">
+                            <div class="relative z-10 px-2 bg-[url('/assets/bg-yellow-dots-vertical.webp')] bg-[length:20%] bg-[center_top_60%] text-transparent bg-clip-text">REGISTRATION</div>
+                            <div class="absolute z-0 px-2 top-0 text-stroke-gray text-stroke-16">REGISTRATION</div>
+                        </div>
+                        <div id="form-container" class="w-full max-w-lg mx-auto relative bg-[#fff8ce] rounded-xl border-8 border-[#483f3f] p-6 lg:p-10 space-y-6" style="box-shadow: -4px 4px 0 #483f3f">
+                            <div class="w-full flex justify-center items-center">
+                                <svg class="animate-spin -ml-1 mr-2 size-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                    <circle class="opacity-30" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                                </svg>
+                                <span class="text-lg"> Loading... </span>
+                            </div>
+                        </div>
                     </div>
-                    <div id="form-container" class="w-full max-w-lg mx-auto relative bg-[#fff8ce] rounded-xl border-8 border-[#483f3f] p-6 lg:p-10 space-y-6" style="box-shadow: -4px 4px 0 #483f3f">
-                        <div class="w-full flex justify-center items-center">
-                            <svg class="animate-spin -ml-1 mr-2 size-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                                <circle class="opacity-30" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-                                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                            </svg>
-                            <span class="text-lg"> Loading... </span>
+                </div>
+                <div class="w-full p-2 bg-[#483F3F] relative prize-wrapper-right-clip lg:max-w-lg hidden xl:block">
+                    <div class="prize-wrapper-right-clip h-full relative bg-[url('/assets/bgteksyellow.jpg')] bg-center bg-cover min-h-[calc(100dvh-var(--margin-top)-85px-266px)]">
+                        <div class="absolute bottom-2 right-2 w-72 lg:w-96 aspect-[6/4]">
+                            <div class="relative w-full h-full">
+                                <div class="absolute bottom-4 right-4 text-[3.5rem] leading-[4rem] uppercase -rotate-6 z-10">
+                                    <div class="text-center relative z-10 bg-[url('/assets/bg-yellow-dots-vertical.webp')] bg-clip-text text-transparent bg-[length:25%] bg-[center_top_100%] px-2">
+                                        Secure<br />
+                                        Your Spot
+                                    </div>
+                                    <div class="text-center absolute z-0 top-0 text-stroke-16 text-stroke-gray px-2">
+                                        Secure<br />
+                                        Your Spot
+                                    </div>
+                                </div>
+                                <img src="/assets/registration-bottom-shape.svg" class="absolute h-full w-full bottom-0 scale-x-[104%] scale-y-[120%]" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hidden absolute top-32 right-52 2xl:right-56 xl:flex flex-col gap-8">
+                    <div class="relative">
+                        <img src="/assets/join-the-mission.png" class="w-96" />
+                        <div class="absolute leading-[3.25rem] tracking-wide left-2/4 top-1/2 -translate-y-[45%] -translate-x-[40%] -rotate-3 text-[3rem] font-bangers uppercase text-center">
+                            <div class="relative pl-0 z-10 text-transparent bg-[url('/assets/bg-yellow-dots-vertical.webp')] bg-clip-text whitespace-nowrap px-2">Join The<br />Mission!!</div>
+                            <div class="z-0 absolute pl-0 inset-0 bg-red-200 text-stroke-12 text-stroke-blue bg-clip-text px-2">Join The<br />Mission!!</div>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <img src="/assets/registration-message-shape.png" class="w-96" />
+                        <div class="absolute w-9/12 left-2/4 top-1/2 -translate-y-2/4 -translate-x-[47%] -rotate-1 leading-5 font-montserrat font-semibold text-center">
+                            Please ensure your details are accurate as these will be used for your certificate.
                         </div>
                     </div>
                 </div>

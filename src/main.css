@@ -21,6 +21,10 @@ html {
         -webkit-text-stroke-width: 8px;
         text-stroke-width: 8px;
     }
+    .text-stroke-12 {
+        -webkit-text-stroke-width: 12px;
+        text-stroke-width: 12px;
+    }
     .text-stroke-16 {
         -webkit-text-stroke-width: 16px;
         text-stroke-width: 16px;
@@ -208,6 +212,19 @@ html {
             clip-path: polygon(100% 0%, 100% 100%, 1% 100%, 11.824% 50.25%, 1% 0%);
         }
     }
+
+    @media (min-width: 1280px) {
+        .register-wrapper-left-clip {
+            clip-path: polygon(0% 0%, 100% 0%, 93.4% 100%, 0% 100%, 0% 0%);
+        }
+    }
+
+    @media (min-width: 1536px) {
+        .register-wrapper-left-clip {
+            clip-path: polygon(0% 0%, 100% 0%, 95.2% 100%, 0% 100%, 0% 0%);
+        }
+    }
+
     .join-the-mission-clip {
         clip-path: polygon(
             0% 53.047%,
