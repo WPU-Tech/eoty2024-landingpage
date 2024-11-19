@@ -118,6 +118,12 @@ const sponsorsList = [
         width: 150,
         href: "https://www.kzzistore.com/",
     },
+    {
+        name: "Dunia Coding",
+        src: "/assets/logos/DC_Alternate.png",
+        width: 80,
+        href: "https://duniacoding.id/",
+    }
 ];
 
 const partnersList = [
@@ -131,7 +137,7 @@ const partnersList = [
         name: "Kelas Terbuka",
         src: "/assets/logos/kelas-terbuka.jpg",
         width: 75,
-        href: "https://kelasterbuka.biz.id/",
+        href: "https://www.youtube.com/@KelasTerbuka",
     },
     {
         name: "Petani Kode",
@@ -185,7 +191,7 @@ const partnersList = [
         name: "Meetap Mobile Developer",
         src: "/assets/logos/meetap.png",
         width: 150,
-        href: "https://www.instagram.com/meetap_mobiledeveloper/",
+        href: "https://www.instagram.com/meetap_dev/",
     },
 ];
 
