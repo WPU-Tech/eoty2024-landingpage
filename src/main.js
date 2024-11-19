@@ -230,4 +230,17 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("timer-data-seconds").textContent = seconds.toString().padStart(2, "0");
         if (timeLeft < 0) clearInterval(countdown);
     }, 1000);
+
+    // easter egg - timer
+    let timerCounter = 0;
+    const timerEls = document.querySelectorAll(".timer-click");
+    timerEls.forEach((timer) => {
+        timer.addEventListener("click", () => {
+            timerCounter++;
+            if (timerCounter >= 10) {
+                alert("ngapain bang 🗿, udah sana register");
+                timerCounter = 0;
+            }
+        });
+    });
 });
