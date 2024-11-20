@@ -72,6 +72,7 @@ const renderContent = async (accessToken, tokenType) => {
                             <option value="professional IT">Professional IT</option>
                             <option value="professional non IT">Professional non IT</option>
                             <option value="student">Student</option>
+                            <option value="other">Other</option>
                         </select>
                         <div class="absolute top-2/4 right-2 -translate-y-2/4 rotate-180">
                             <svg
@@ -100,6 +101,9 @@ const renderContent = async (accessToken, tokenType) => {
                             <option value="youtube">Youtube</option>
                             <option value="instagram">Instagram</option>
                             <option value="tiktok">Tiktok</option>
+                            <option value="facebook">Facebook</option>
+                            <option value="twitter">Twitter/X</option>
+                            <option value="other">Other</option>
                         </select>
                         <div class="absolute top-2/4 right-2 -translate-y-2/4 rotate-180">
                             <svg
