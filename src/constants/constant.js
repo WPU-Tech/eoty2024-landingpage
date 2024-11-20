@@ -123,6 +123,12 @@ const sponsorsList = [
         src: "/assets/logos/DC_Alternate.png",
         width: 80,
         href: "https://duniacoding.id/",
+    },
+    {
+        name: "Ujione",
+        src: "/assets/logos/ujione-by-jetorbit-2.svg",
+        width: 150,
+        href: "https://ujione.id/",
     }
 ];
 
