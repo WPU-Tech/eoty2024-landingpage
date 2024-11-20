@@ -162,7 +162,7 @@ const renderContent = async (accessToken, tokenType) => {
                     formData.append("token", accessToken);
                     const data = Object.fromEntries(formData);
 
-                    const res = await fetch("https://cssapi.wpu.run/register", {
+                    const res = await fetch("https://codeground-api.wpu.run/register", {
                         method: "POST",
                         headers: {
                             "Content-Type": "application/json",
