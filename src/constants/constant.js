@@ -5,7 +5,7 @@ const games = [
     },
     {
         title: "Pixel Legion",
-        description: "A challenge for the creative minds! Design and develop a pixel art game that will test your creativity and coding skills.",
+        description: "A battle of precision and strategy, where you'll need to perfect every detail and optimize your approach to outlast the competition.",
     },
     {
         title: "Syntax Showdown",
@@ -85,8 +85,12 @@ const faqsList = [
         content: "The event will be held online, using Discord for communication and our custom platform for the coding challenges.",
     },
     {
+        title: "When does registration close?",
+        content: `Registration will close on December 6, 2024 at 23:59. Don't miss your chance to join—<a href="/register/" target="_blank"><u>register now</u></a>!`,
+    },
+    {
         title: "What do I need to participate?",
-        content: "You'll need a stable internet connection, a Discord account, and, of course, your coding skills.",
+        content: "You'll need a Laptop/PC, stable internet connection, a Discord account, and, of course, your coding skills.",
     },
     {
         title: "Can I join the event without being a WPU Discord member?",
@@ -95,8 +99,12 @@ const faqsList = [
     {
         title: "How to join WPU Discord server?",
         content:
-            'To join the WPU Discord server, simply click on this <a href="https://discord.gg/wpu" target="_blank">link</a> and follow the instructions to verify your account. If you have any questions, feel free to reach out to our contact person for assistance.',
+            'To join the WPU Discord server, simply click on this <a href="https://discord.gg/wpu" target="_blank"><u>link</u></a> and follow the instructions to verify your account. If you have any questions, feel free to reach out to our contact person for assistance.',
     },
+    {
+        title: "Why do I need to connect my Discord account?",
+        content: "Connecting your Discord account is required to verify that you've joined the WPU Discord server and obtained the Mahasiswa role. Don't worry, your information will remain secure!"
+    }
 ];
 
 const sponsorsList = [
