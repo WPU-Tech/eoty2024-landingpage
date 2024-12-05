@@ -86,7 +86,7 @@ const faqsList = [
     },
     {
         title: "When does registration close?",
-        content: `Registration will close on December 6, 2024 at 23:59. Don't miss your chance to join—<a href="/register/" target="_blank"><u>register now</u></a>!`,
+        content: `Registration will close on December 6, 2024 at 18:00. Don't miss your chance to join—<a href="/register/" target="_blank"><u>register now</u></a>!`,
     },
     {
         title: "What do I need to participate?",
