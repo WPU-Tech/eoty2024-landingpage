@@ -1,4 +1,31 @@
 const renderContent = async (accessToken, tokenType) => {
+    const registerSection = document.getElementById("register-section");
+
+    const [date, hour] = new Intl.DateTimeFormat("id-ID", {
+        day: "numeric",
+        month: "numeric",
+        year: "numeric",
+        hour: "numeric",
+        timeZone: "Asia/Jakarta",
+    })
+        .format(new Date())
+        .split(", ");
+
+    if (date === "6/12/2024" && parseInt(hour) > 18) {
+        const content = `
+            <div class="w-full h-full p-2 bg-[#483F3F] relative lg:-mr-11">
+                <div class="flex items-center flex-col gap-8 xl:gap-4 justify-center px-6 xl:px-0 bg-[url('/assets/bg-blue.webp')] bg-center bg-cover py-16 min-h-[calc(100dvh-var(--margin-top)-85px-266px)]">
+                    <div class="w-full max-w-lg mx-auto relative bg-[#fff8ce] rounded-xl border-8 border-[#483f3f] p-6 lg:p-10 space-y-6" style="box-shadow: -4px 4px 0 #483f3f">
+                        <div class="w-full flex justify-center items-center text-xl text-center font-montserrat font-semibold">We regret to inform you that event registration is now closed. We hope to see you at our future events.</div>
+                    </div>
+                </div>
+            </div>
+        `;
+
+        registerSection.innerHTML = content;
+        return;
+    }
+
     const formContainer = document.getElementById("form-container");
 
     const discordLogin = document.createElement("button");
