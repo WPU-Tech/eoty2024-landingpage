@@ -103,8 +103,8 @@ const faqsList = [
     },
     {
         title: "Why do I need to connect my Discord account?",
-        content: "Connecting your Discord account is required to verify that you've joined the WPU Discord server and obtained the Mahasiswa role. Don't worry, your information will remain secure!"
-    }
+        content: "Connecting your Discord account is required to verify that you've joined the WPU Discord server and obtained the Mahasiswa role. Don't worry, your information will remain secure!",
+    },
 ];
 
 const sponsorsList = [
@@ -113,6 +113,12 @@ const sponsorsList = [
         src: "/assets/logos/LOGO_WPU_Course.png",
         width: 200,
         href: "https://belajarmern.id",
+    },
+    {
+        name: "IDCloudhost",
+        src: "/assets/logos/idCloudHost-vertical.png",
+        width: 200,
+        href: "https://idcloudhost.com",
     },
     {
         name: "JetBrains",
@@ -137,7 +143,7 @@ const sponsorsList = [
         src: "/assets/logos/ujione-by-jetorbit-2.svg",
         width: 150,
         href: "https://ujione.id/",
-    }
+    },
 ];
 
 const partnersList = [
