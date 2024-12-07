@@ -224,10 +224,10 @@ document.addEventListener("DOMContentLoaded", function () {
         const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
         const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
 
-        document.getElementById("timer-data-days").textContent = days.toString().padStart(2, "0");
-        document.getElementById("timer-data-hours").textContent = hours.toString().padStart(2, "0");
-        document.getElementById("timer-data-minutes").textContent = minutes.toString().padStart(2, "0");
-        document.getElementById("timer-data-seconds").textContent = seconds.toString().padStart(2, "0");
+        document.getElementById("timer-data-days").textContent = "00";
+        document.getElementById("timer-data-hours").textContent = "00";
+        document.getElementById("timer-data-minutes").textContent = "00";
+        document.getElementById("timer-data-seconds").textContent = "00";
         if (timeLeft < 0) clearInterval(countdown);
     }, 1000);
 
