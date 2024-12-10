@@ -41,7 +41,7 @@ const timeline = [
     },
     {
         title: "Build Your Party",
-        date: "Tuesday, December 12, 2024",
+        date: "Thursday, December 12, 2024",
         description: "Time to strategize and prepare! Join us for the technical meeting and get geared up for the rounds ahead.",
     },
     {
