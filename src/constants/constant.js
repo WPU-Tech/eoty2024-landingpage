@@ -61,7 +61,7 @@ const timeline = [
     },
     {
         title: "Dijkstra Quest",
-        date: "Sunday, December 21, 2024",
+        date: "Saturday, December 21, 2024",
         description: "A final coding challenge where the best will advance to the grand finale!",
     },
     {
