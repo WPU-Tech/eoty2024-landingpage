@@ -26,6 +26,7 @@ export default defineConfig({
                 main: resolve(__dirname, "index.html"),
                 register: resolve(__dirname, "register/index.html"),
                 feedback: resolve(__dirname, "feedback/index.html"),
+                prize: resolve(__dirname, "prize/index.html"),
             },
         },
     },
